@@ -659,6 +659,12 @@ http://www.tooplate.com/view/2106-soft-landing
     display: inline-block;
   }
 
+  .pricing-btn-panel {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
 
 
   /*---------------------------------------
@@ -948,5 +954,53 @@ http://www.tooplate.com/view/2106-soft-landing
 .blog-part:hover {
     -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
     box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+}
+
+/* user player */
+
+.display-flex {
+    display: flex;
+}
+
+.player-custom {
+    width: 100%;
+    min-height: 400px;
+    max-width: 600px;
+    min-width: 150px;
+}
+
+.card-custom {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    min-width: 250px;
+    min-height: 20px;
+    max-width: 400px;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    margin: 5px;
+}
+
+.card-collapse {
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    margin: 5px;
+}
+
+.card-custom-padding {
+    padding: 10px;
+}
+
+.courses-list-container {
+    overflow: auto;
+    height: 100%;
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 500px;
+    padding: 10px;
 }
 

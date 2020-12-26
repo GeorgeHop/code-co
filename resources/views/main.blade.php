@@ -76,6 +76,8 @@
 @yield('blog_list')
 @yield('about')
 @yield('courses')
+@yield('user_main')
+@yield('user_course_list')
 
 
 {{--    <!-- ABOUT -->--}}
