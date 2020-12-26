@@ -82,6 +82,11 @@ http://www.tooplate.com/view/2106-soft-landing
     padding-bottom: 40px;
   }
 
+  .section-title-margin-top {
+      padding-bottom: 40px;
+      margin-top: 40px;
+  }
+
   section {
     position: relative;
     padding: 100px 0;
@@ -255,8 +260,11 @@ http://www.tooplate.com/view/2106-soft-landing
     padding: 25px 0;
   }
 
+  .navbar-brand-white {
+      color: #ffffff;
+  }
+
   .custom-navbar .navbar-brand {
-    color: #ffffff;
     font-size: 25px;
     font-weight: 500;
     letter-spacing: -1px;
@@ -270,10 +278,13 @@ http://www.tooplate.com/view/2106-soft-landing
     margin-left: 6em;
   }
 
+  .white-link {
+      color: #f0f0f0;
+  }
+
   .custom-navbar .nav li a {
     font-size: 16px;
     font-weight: normal;
-    color: #f0f0f0;
     padding-right: 22px;
     padding-left: 22px;
   }
@@ -282,6 +293,14 @@ http://www.tooplate.com/view/2106-soft-landing
     background: transparent;
     color: #29ca8e;
   }
+
+  .nav .black-text li, a {
+      color: black;
+  }
+
+    .navbar-brand-black {
+        color: black;
+    }
 
   .custom-navbar .navbar-nav > li > a:hover,
   .custom-navbar .navbar-nav > li > a:focus {
@@ -866,3 +885,68 @@ http://www.tooplate.com/view/2106-soft-landing
       height: 65vh;
     }
   }
+
+/* login */
+
+.login-card {
+    padding: 30px;
+    min-height: 150px;
+    min-width: 200px;
+    border-radius: 10px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+}
+
+.login-form .form-control {
+    border-color: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50px;
+    height: 50px;
+    margin-right: 0.5em;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.login-card h3 {
+    margin-bottom: 20px;
+}
+
+.login-card p a {
+    cursor: pointer;
+}
+
+/* blog */
+.blog-part {
+    margin-bottom: 30px;
+    background-image: url("../images/home-bg.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    min-height: 90px;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 7px -1px #000000;
+    box-shadow: 0px 0px 7px -1px #000000;
+    cursor: pointer;
+}
+
+.blog-part-overlay {
+    padding: 25px;
+    color: black;
+    border-radius: 10px;
+    min-height: 190px;
+    width: 100%;
+    transition: 0.7s;
+    background: rgba(37, 177, 119, 0.1);
+}
+
+.blog-part-overlay:hover {
+    color: white;
+    background: rgba(37, 177, 119, 0.6);
+}
+
+.blog-part:hover {
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+}
+
