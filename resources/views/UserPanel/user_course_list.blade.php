@@ -1,7 +1,13 @@
 @extends('main')
 
 @section('user_course_list')
-<section>
+<section data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <video class="header-small-video" playsinline autoplay muted loop>
+        <source src="/video/rainingCode.mp4">
+    </video>
+</section>
+<section class="custom-section">
     <div class="container">
         <div class="row">
             <div class="section-title">
@@ -17,46 +23,22 @@
         </div>
        <div class="courses-list-container">
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
            <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
-           </div>
-           <div class="card-custom card-custom-padding">
-               1. Aлгоритмы
+               <span class="card-custom-circle">1</span> Aлгоритмы
            </div>
        </div>
     </div>

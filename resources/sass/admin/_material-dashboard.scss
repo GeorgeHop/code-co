@@ -1,0 +1,95 @@
+/*!
+
+ =========================================================
+ * Material Dashboard Pro - v2.1.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-dashboard-pro
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+ @import "resources/sass/admin/material-dashboard/variables";
+ @import "resources/sass/admin/material-dashboard/mixins";
+ @import "resources/sass/admin/material-dashboard/mixins/social-buttons";
+ @import "resources/sass/admin/material-dashboard/core-bootstrap";
+
+ // Core Components
+ @import "resources/sass/admin/material-dashboard/buttons";
+ @import "resources/sass/admin/material-dashboard/checkboxes";
+ @import "resources/sass/admin/material-dashboard/radios";
+ @import "resources/sass/admin/material-dashboard/badges";
+ @import "resources/sass/admin/material-dashboard/forms";
+ @import "resources/sass/admin/material-dashboard/input-group";
+ @import "resources/sass/admin/material-dashboard/images";
+ @import "resources/sass/admin/material-dashboard/navbar";
+ @import "resources/sass/admin/material-dashboard/pagination";
+ @import "resources/sass/admin/material-dashboard/pills";
+ @import "resources/sass/admin/material-dashboard/type";
+ @import "resources/sass/admin/material-dashboard/tabs";
+ @import "resources/sass/admin/material-dashboard/tooltip";
+ @import "resources/sass/admin/material-dashboard/popover";
+ @import "resources/sass/admin/material-dashboard/modal";
+ @import "resources/sass/admin/material-dashboard/misc";
+ @import "resources/sass/admin/material-dashboard/headers";
+ @import "resources/sass/admin/material-dashboard/alerts";
+ @import "resources/sass/admin/material-dashboard/footers";
+ @import "resources/sass/admin/material-dashboard/dropdown";
+ @import "resources/sass/admin/material-dashboard/progress";
+ @import "resources/sass/admin/material-dashboard/togglebutton";
+ @import "resources/sass/admin/material-dashboard/ripples";
+@import "resources/sass/admin/material-dashboard/tables";
+@import "resources/sass/admin/material-dashboard/info-areas";
+
+// Cards
+ @import "resources/sass/admin/material-dashboard/cards";
+ @import "resources/sass/admin/material-dashboard/cards/card-signup";
+ @import "resources/sass/admin/material-dashboard/cards/card-plain";
+ @import "resources/sass/admin/material-dashboard/cards/card-plain-extend";
+ @import "resources/sass/admin/material-dashboard/cards/card-stats";
+ @import "resources/sass/admin/material-dashboard/cards/card-testimonials";
+ @import "resources/sass/admin/material-dashboard/cards/card-profile";
+ @import "resources/sass/admin/material-dashboard/cards/card-blog";
+ @import "resources/sass/admin/material-dashboard/cards/card-product";
+ @import "resources/sass/admin/material-dashboard/cards/card-pricing";
+ @import "resources/sass/admin/material-dashboard/cards/card-collapse";
+ @import "resources/sass/admin/material-dashboard/cards/card-form-horizontal";
+ @import "resources/sass/admin/material-dashboard/cards/card-background";
+ @import "resources/sass/admin/material-dashboard/cards/card-rotate";
+
+ // Components for PRO
+ @import "resources/sass/admin/material-dashboard/forms-extend";
+ @import "resources/sass/admin/material-dashboard/misc-extend";
+ @import "resources/sass/admin/material-dashboard/footers-extend";
+ @import "resources/sass/admin/material-dashboard/rtl";
+ @import "resources/sass/admin/material-dashboard/sidebar-and-main-panel";
+ @import "resources/sass/admin/material-dashboard/fixed-plugin";
+ @import "resources/sass/admin/material-dashboard/pages";
+ @import "resources/sass/admin/material-dashboard/timeline";
+ @import "resources/sass/admin/material-dashboard/social-buttons";
+
+ //plugin css
+ @import "resources/sass/admin/material-dashboard/plugins/plugin-nouislider";
+ @import "resources/sass/admin/material-dashboard/plugins/animate";
+ @import "resources/sass/admin/material-dashboard/plugins/sweetalert2";
+ @import "resources/sass/admin/material-dashboard/plugins/datatables.net";
+ @import "resources/sass/admin/material-dashboard/plugins/jquery.jvectormap";
+ @import "resources/sass/admin/material-dashboard/plugins/plugin-datetime-picker";
+ @import "resources/sass/admin/material-dashboard/plugins/plugin-fileupload";
+ @import "resources/sass/admin/material-dashboard/plugins/fullcalendar";
+ @import "resources/sass/admin/material-dashboard/plugins/wizard-card";
+ @import "resources/sass/admin/material-dashboard/plugins/chartist";
+ @import "resources/sass/admin/material-dashboard/plugins/plugin-bootstrap-select";
+ @import "resources/sass/admin/material-dashboard/plugins/perfect-scrollbar";
+ @import "resources/sass/admin/material-dashboard/plugins/plugin-tagsinput";
+
+
+ // example pages and sections
+ @import "resources/sass/admin/material-dashboard/example-pages";
+
+
+ @import "resources/sass/admin/material-dashboard/responsive";

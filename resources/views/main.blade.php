@@ -49,20 +49,32 @@
             </button>
 
             <!-- lOGO TEXT HERE -->
-            <a href="index.html" class="navbar-brand {{  $isWhite ? 'navbar-brand-white' : 'navbar-brand-black' }}">{{ config('app.name') }}</a>
+            <a href="index.html" class="navbar-brand navbar-brand-white">{{ config('app.name') }}</a>
         </div>
 
         <!-- MENU LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/" class="{{ $link }}">Главная</a></li>
-                <li><a href="{{ Request::is('/') ? '#feature' : '/courses' }}" class="smoothScroll {{  $link }}">Курсы</a></li>
-                <li><a href="/about" class="{{  $link }}">О нас</a></li>
-                <li><a href="/blog-list" class="{{  $link }}">Блог</a></li>
-                <li><a href="#contact" class="{{  $link }}">Контакты</a></li>
+                <li><a href="/" class="white-link">Главная</a></li>
+                <li><a href="{{ Request::is('/') ? '#feature' : '/courses' }}" class="smoothScroll white-link">Курсы</a></li>
+                <li><a href="/about" class="white-link">О нас</a></li>
+                <li><a href="/blog-list" class="white-link">Блог</a></li>
+                <li><a href="/contacts" class="white-link">Контакты</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ Request::is('login') ? '/registration' : '/login'}}" class="{{  $link }}">{{ Request::is('login') ? 'Registration' : 'Log in'}}</a></li>
+                @if(Auth::check())
+                    <li>
+                        <a href="/user-panel" class="white-link">Личный кабинет</a>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-primary margin-top-logout-button">Log out</button>
+                        </form>
+                    </li>
+                @else
+                    <li><a href="{{ Request::is('login') ? '/registration' : '/login'}}" class="white-link">{{ Request::is('login') ? 'Registration' : 'Log in'}}</a></li>
+                @endif
             </ul>
         </div>
 
@@ -78,6 +90,9 @@
 @yield('courses')
 @yield('user_main')
 @yield('user_course_list')
+@yield('blog_single')
+@yield('contacts')
+@yield('confirm')
 
 
 {{--    <!-- ABOUT -->--}}

@@ -1,8 +1,13 @@
 @extends('main')
 
 @section('about')
-    <!-- ABOUT -->
-    <section id="about" data-stellar-background-ratio="0.5">
+    <section data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <video class="header-small-video" playsinline autoplay muted loop>
+            <source src="/video/rainingCode.mp4">
+        </video>
+    </section>
+    <section id="about" class="custom-section" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
 
