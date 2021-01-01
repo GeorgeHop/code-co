@@ -1,12 +1,6 @@
-@extends('main')
+@extends('user.layouts.default_user')
 
-@section('user_main')
-    <section data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <video class="header-small-video" playsinline autoplay muted loop>
-            <source src="/video/rainingCode.mp4">
-        </video>
-    </section>
+@section('content')
     <section id="pricing" class="custom-section" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">

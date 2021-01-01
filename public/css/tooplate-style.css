@@ -984,6 +984,15 @@ http://www.tooplate.com/view/2106-soft-landing
     box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
 }
 
+.blog-single-description {
+    height: 120px;
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 999;
+}
+
 /* user player */
 
 .display-flex {
