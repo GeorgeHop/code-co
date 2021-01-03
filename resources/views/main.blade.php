@@ -63,9 +63,23 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())
-                    <li>
-                        <a href="/user-panel" class="white-link">Личный кабинет</a>
-                    </li>
+                    @if(Auth::user()->is_admin)
+                        <li>
+                            <div class="dropdown">
+                                <button style="margin-right: 10px; width: 180px;" class="btn btn-warning dropdown-toggle margin-top-logout-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Юзер панель
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Админ панель</a>
+                                    <a class="dropdown-item" href="/user-panel">Личный кабинет</a>
+                                </div>
+                            </div>
+                        </li>
+                    @else
+                        <li>
+                            <a href="/user-panel" class="white-link">Личный кабинет</a>
+                        </li>
+                    @endif
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

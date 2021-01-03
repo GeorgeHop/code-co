@@ -37,12 +37,9 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/user-panel', function () {return view('user.pages.UserPanel.user_main');});
+    Route::get('/user-panel', function () {return view('user.pages.UserPanel.user_main');})->name('user.panel');
     Route::get('/user-course-list', function () {return view('user.pages.UserPanel.user_course_list');});
 });
-
-Route::view('/admin-auth', 'AdminPanel.admin_auth');
-Route::get('/admin-panel', function () {return view('admin');});
 
 Route::get('/test', function () {
     $user = \App\Models\User::first();

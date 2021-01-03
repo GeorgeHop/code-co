@@ -7,7 +7,7 @@
 
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
-                        <h1>Choose any plan</h1>
+                        <h1>Выберите курс !</h1>
                     </div>
                 </div>
 
@@ -78,9 +78,10 @@
             <div class="row">
 
                 <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <form id="contact-form" role="form" action="" method="post">
+                    <form id="contact-form" role="form" action="" method="POST">
+                        @csrf
                         <div class="section-title">
-                            <h1>Say hello to us</h1>
+                            <h1>Пишите если есть вопросы.</h1>
                         </div>
 
                         <div class="col-md-4 col-sm-4">
