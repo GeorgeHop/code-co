@@ -49,7 +49,7 @@
             </button>
 
             <!-- lOGO TEXT HERE -->
-            <a href="index.html" class="navbar-brand navbar-brand-white">{{ config('app.name') }}</a>
+            <a href="/" class="navbar-brand navbar-brand-white">{{ config('app.name') }}</a>
         </div>
 
         <!-- MENU LINKS -->
