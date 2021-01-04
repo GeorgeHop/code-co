@@ -33,9 +33,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-
     return redirect('/user-panel');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/user-panel', function () {return view('user.pages.UserPanel.user_main');})->name('user.panel');
