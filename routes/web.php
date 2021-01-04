@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -26,8 +27,8 @@ Route::get('/confirm', function () {return view('user.pages.Login&Registration.c
 Route::get('/blog-list', [BlogController::class, 'getAllPosts']);
 Route::get('/blog-single/{post}', [BlogController::class, 'getSinglePost'])->name('single');
 Route::get('/about', function () {return view('user.pages.About.about');});
-Route::get('/courses', function () {return view('user.pages.Courses.courses');});
-Route::view('/course', 'user.pages.Courses.courses_single');
+Route::get('/courses', [CourseController::class, 'index'])->name('courses.list');
+Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
 Route::get('/contacts', function () {return view('user.pages.Contacts.contacts');});
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 

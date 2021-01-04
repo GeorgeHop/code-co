@@ -11,60 +11,33 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing-thumb">
-                        <div class="pricing-title">
-                            <h2>Student</h2>
-                        </div>
-                        <div class="pricing-info">
-                            <p>20 Responsive Designs</p>
-                            <p>10 Dashboards</p>
-                            <p>1 TB Storage</p>
-                            <p>6 TB Bandwidth</p>
-                            <p>24-hour Support</p>
-                        </div>
-                        <div class="pricing-bottom">
-                            <span class="pricing-dollar">$200/mo</span>
-                            <a href="#" class="section-btn pricing-btn">Register now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing-thumb">
-                        <div class="pricing-title">
-                            <h2>Business</h2>
-                        </div>
-                        <div class="pricing-info">
-                            <p>50 Responsive Designs</p>
-                            <p>30 Dashboards</p>
-                            <p>2 TB Storage</p>
-                            <p>12 TB Bandwidth</p>
-                            <p>15-minute Support</p>
-                        </div>
-                        <div class="pricing-bottom">
-                            <span class="pricing-dollar">$350/mo</span>
-                            <a href="#" class="section-btn pricing-btn">Register now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricing-thumb">
-                        <div class="pricing-title">
-                            <h2>Professional</h2>
-                        </div>
-                        <div class="pricing-info">
-                            <p>100 Responsive Designs</p>
-                            <p>60 Dashboards</p>
-                            <p>5 TB Storage</p>
-                            <p>25 TB Bandwidth</p>
-                            <p>1-minute Support</p>
-                        </div>
-                        <div class="pricing-bottom">
-                            <span class="pricing-dollar">$550/mo</span>
-                            <a href="#" class="section-btn pricing-btn">Register now</a>
-                        </div>
+                <div class="row">
+                    <?php
+                    $cols = 3;
+                    $rows = 0;
+                    ?>
+                    <div class="row">
+                        @foreach($courses as $course)
+                            <div class="col-md-4 col-sm-6">
+                                <div class="pricing-thumb">
+                                    <div class="pricing-title">
+                                        <h2>{{ $course['name'] }}</h2>
+                                    </div>
+                                    <div class="pricing-info">
+                                        <p>{{ $course['info'] }}</p>
+                                        <p>{{ $course['duration'] }}/ дней</p>
+                                    </div>
+                                    <div class="pricing-bottom">
+                                        <span class="pricing-dollar">{{ $course['cost'] }}</span>
+                                        <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Register now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                                $rows++;
+                                if ($rows % $cols == 0) echo '</div><div class="row">';
+                            ?>
+                        @endforeach
                     </div>
                 </div>
 

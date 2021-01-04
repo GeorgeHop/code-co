@@ -56,7 +56,7 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/" class="white-link">Главная</a></li>
-                <li><a href="{{ Request::is('/') ? '#feature' : '/courses' }}" class="smoothScroll white-link">Курсы</a></li>
+                <li><a href="{{ Request::is('/') ? '#feature' : route('courses.list') }}" class="smoothScroll white-link">Курсы</a></li>
                 <li><a href="/about" class="white-link">О нас</a></li>
                 <li><a href="/blog-list" class="white-link">Блог</a></li>
                 <li><a href="/contacts" class="white-link">Контакты</a></li>
