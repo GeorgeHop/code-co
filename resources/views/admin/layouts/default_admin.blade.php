@@ -55,7 +55,7 @@
                     <a href="#">Юзеры</a>
                 </li>
                 <li>
-                    <a href="/admin/posts-list">Блог</a>
+                    <a href="{{ route('admin.posts.index') }}">Блог</a>
                 </li>
             </ul>
         </nav>

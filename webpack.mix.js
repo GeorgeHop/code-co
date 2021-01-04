@@ -11,3 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.js('resources/js/admin', 'public/js')
+    .copy('node_modules/tinymce/skins', 'public/js/skins')
+    .copy('node_modules/tinymce/icons', 'public/js/icons');

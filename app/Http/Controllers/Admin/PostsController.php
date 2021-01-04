@@ -7,44 +7,34 @@ use App\Models\Post;
 
 class PostsController extends Controller
 {
-    public function getAllPosts(Post $post) {
-        return view('admin.pages.Blog.list', ['posts' => $post->latest()->get()]);
+    public function index() {
+        return view('admin.pages.posts.list', ['posts' => Post::latest()->paginate()]);
     }
 
-    public function getSinglePost(Post $post)
-    {
-        return view('admin.pages.Blog.edit', ['post' => $post]);
+    public function create() {
+        return view('admin.pages.posts.edit', ['post' => new Post(), 'edit' => false]);
     }
 
-    public function update(Post $post)
-    {
-        $post->update($this->validateData());
-
-        return redirect('/admin/posts-list');
-    }
-
-    public function create()
-    {
-        return view('admin.pages.Blog.create');
-    }
-
-    public function store()
-    {
+    public function store() {
         Post::create($this->validateData());
-
-        return redirect('/admin/posts-list');
+        return redirect(route('admin.posts.index'));
     }
 
-    public function destroy(Post $post)
-    {
-        $deletedPost = Post::find($post->id);
-        $deletedPost->delete();
-
-        return redirect('/admin/posts-list');
+    public function edit(Post $post) {
+        return view('admin.pages.posts.edit', ['post' => $post, 'edit' => true]);
     }
 
-    protected function validateData()
-    {
+    public function update(Post $post) {
+        $post->update($this->validateData());
+        return redirect(route('admin.posts.index'));
+    }
+
+    public function destroy(Post $post) {
+        $post->delete();
+        return redirect(route('admin.posts.index'));
+    }
+
+    protected function validateData() {
         return request()->validate([
             'title' => ['required', 'min:3', 'max:30'],
             'description' => ['required', 'min:10'],
