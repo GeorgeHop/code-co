@@ -27,6 +27,7 @@ Route::get('/blog-list', [BlogController::class, 'getAllPosts']);
 Route::get('/blog-single/{post}', [BlogController::class, 'getSinglePost'])->name('single');
 Route::get('/about', function () {return view('user.pages.About.about');});
 Route::get('/courses', function () {return view('user.pages.Courses.courses');});
+Route::view('/course', 'user.pages.Courses.courses_single');
 Route::get('/contacts', function () {return view('user.pages.Contacts.contacts');});
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
