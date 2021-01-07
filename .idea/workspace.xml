@@ -19,15 +19,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4792258b-0986-4293-b712-55536b528e7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/pages/Courses/courses_single.blade.php" afterDir="false" />
+    <list default="true" id="8c502903-1db2-4021-a058-b518fea86bb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/lfm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/cropper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/dropzone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/lfm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/mime-icons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/adobe.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/folder-1/sleeping-dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/word.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/sleeping-dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/thumbs/sleeping-dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/152px color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/72px color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/92px color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/Logomark color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/cropper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/dropzone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/filemanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/filemanager.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/stand-alone-button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/Courses/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/pages/Courses/courses.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/Courses/courses_sigle.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +68,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -59,7 +80,6 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
@@ -72,7 +92,6 @@
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
@@ -95,7 +114,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
@@ -135,10 +153,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
@@ -170,6 +186,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/unisharp/laravel-filemanager" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1m4BM1z4EQ91Xw0JvNoxXv4GtmJ" />
@@ -183,22 +206,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Development\CurrentProjects\code-co\resources\js\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\code-co" />
       <recent name="D:\Development\CurrentProjects\code-co\app\Http\Controllers\Admin" />
       <recent name="D:\Development\CurrentProjects\code-co\resources\views\admin\layouts" />
       <recent name="D:\Development\CurrentProjects\code-co\resources\js" />
       <recent name="D:\Development\CurrentProjects\code-co\resources\views\admin\pages\courses" />
-      <recent name="D:\Development\CurrentProjects\code-co\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Development\CurrentProjects\code-co\resources\js\admin" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -251,68 +276,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="713" y="345" key="#Notifications" timestamp="1609279659963">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="713" y="345" key="#Notifications/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609279659963" />
-    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609166029028">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="699" y="320" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609166029028" />
-    <state x="673" y="26" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609695970684">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="673" y="26" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609695970684" />
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609691942544">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609691942544" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609696283257">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609696283257" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1608982310529">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1608982310529" />
-    <state width="1877" height="330" key="GridCell.Tab.0.bottom" timestamp="1609688647508">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.bottom/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609688647508" />
-    <state width="1877" height="330" key="GridCell.Tab.0.center" timestamp="1609688647508">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.center/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609688647508" />
-    <state width="1877" height="330" key="GridCell.Tab.0.left" timestamp="1609688647500">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.left/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609688647500" />
-    <state width="1877" height="330" key="GridCell.Tab.0.right" timestamp="1609688647508">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.right/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609688647508" />
-    <state x="529" y="295" key="NewPhpFileDialog" timestamp="1609771211921">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="794" y="449" key="NewPhpFileDialog/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609706396463" />
-    <state x="529" y="295" key="NewPhpFileDialog/0.0.1280.689@0.0.1280.689" timestamp="1609771211921" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1609593656821">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609593656821" />
-    <state x="356" y="131" width="1200" height="870" key="find.popup" timestamp="1609701365408">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="356" y="131" width="1200" height="870" key="find.popup/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609701365408" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1609696333879">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" key="run.anything.popup/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609696333879" />
-    <state x="1103" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1609715073410">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="1103" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1280.700/0.0.1920.1050@0.0.1920.1050" timestamp="1609715073410" />
   </component>
 </project>

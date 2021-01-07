@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\PostsController;
 use Illuminate\Support\Facades\Route;
+use UniSharp\LaravelFilemanager\Lfm;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::resource('posts', PostsController::class);
     Route::resource('courses', CourseController::class);
+
+    Route::prefix('lfm')->group(function () {
+        Lfm::routes();
+    });
 
     Route::get('test', function () {})->name('test');
 });
