@@ -21,6 +21,7 @@
                 class="form-control tinymce"
                 id="description"
                 name="description"
+                rows="25"
             >{{ old('description') ?? $post->description }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Сохранить</button>

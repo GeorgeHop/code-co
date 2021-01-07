@@ -20,34 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c502903-1db2-4021-a058-b518fea86bb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/lfm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/cropper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/dropzone.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/lfm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/css/mime-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/adobe.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/folder-1/sleeping-dog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/files/word.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/sleeping-dog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/images/test-folder/thumbs/sleeping-dog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/152px color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/72px color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/92px color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/Logomark color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/img/loader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/cropper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/dropzone.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/filemanager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/filemanager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-filemanager/js/stand-alone-button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/posts/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,5 +249,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add filemanager" />
+    <option name="LAST_COMMIT_MESSAGE" value="add filemanager" />
   </component>
 </project>
