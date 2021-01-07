@@ -20,6 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c502903-1db2-4021-a058-b518fea86bb3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/admin/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/admin/modules/laravel-file-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/upload-single.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_01_221527_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_01_221527_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/admin/tinymce.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin/modules/tinymce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/admin/toolplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin/modules/toolplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/posts/edit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +190,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/components/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -189,13 +198,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\code-co\resources\views\components\admin" />
+      <recent name="C:\laragon\www\code-co\resources\js\admin\modules" />
       <recent name="C:\laragon\www\code-co" />
       <recent name="D:\Development\CurrentProjects\code-co\app\Http\Controllers\Admin" />
       <recent name="D:\Development\CurrentProjects\code-co\resources\views\admin\layouts" />
-      <recent name="D:\Development\CurrentProjects\code-co\resources\js" />
-      <recent name="D:\Development\CurrentProjects\code-co\resources\views\admin\pages\courses" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\code-co\resources\js\admin" />
+      <recent name="C:\laragon\www\code-co\resources\js\admin\modules" />
       <recent name="D:\Development\CurrentProjects\code-co\resources\js\admin" />
     </key>
   </component>
@@ -252,6 +263,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add filemanager" />
-    <option name="LAST_COMMIT_MESSAGE" value="add filemanager" />
+    <MESSAGE value="increase textarea size" />
+    <option name="LAST_COMMIT_MESSAGE" value="increase textarea size" />
   </component>
 </project>

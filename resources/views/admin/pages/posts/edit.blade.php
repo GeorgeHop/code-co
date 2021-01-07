@@ -24,6 +24,9 @@
                 rows="25"
             >{{ old('description') ?? $post->description }}</textarea>
         </div>
+        <div class="form-group">
+            <x-admin.upload-single label="Изображение" name="thumbnail" :value="$post->thumbnail"/>
+        </div>
         <button type="submit" class="btn btn-primary">Сохранить</button>
     </form>
 </div>

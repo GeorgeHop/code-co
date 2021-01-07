@@ -1,4 +1,5 @@
-window.$ = window.jQuery = require('jquery');
+require('./bootstrap');
 
-require('./toolplate');
-require('./tinymce');
+require('./modules/toolplate');
+require('./modules/tinymce');
+require('./modules/laravel-file-manager');
