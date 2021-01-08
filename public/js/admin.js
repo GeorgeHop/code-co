@@ -74043,7 +74043,7 @@ $('[data-toggle="offcanvas"]').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\code-co\resources\js\admin */"./resources/js/admin/index.js");
+module.exports = __webpack_require__(/*! D:\Development\CurrentProjects\code-co\resources\js\admin */"./resources/js/admin/index.js");
 
 
 /***/ })

@@ -22,9 +22,6 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="../css/tooplate-style.css">
     <title>{{ config('app.name') }}</title>
-    <style>
-
-    </style>
 </head>
 <body>
 <!-- PRE LOADER -->

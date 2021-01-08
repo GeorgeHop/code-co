@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Курсы</a>
+                    <a href="{{ route('admin.courses.index') }}">Курсы</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ученики <span class="caret"></span></a>
