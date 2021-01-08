@@ -954,21 +954,22 @@ http://www.tooplate.com/view/2106-soft-landing
 /* blog */
 .blog-part {
     margin-bottom: 30px;
-    background-image: url("../images/home-bg.jpg");
     background-size: cover;
     border-radius: 10px;
-    min-height: 90px;
+    min-height: 120px;
     transition: 0.5s;
     -webkit-box-shadow: 0px 0px 7px -1px #000000;
     box-shadow: 0px 0px 7px -1px #000000;
     cursor: pointer;
+    text-shadow: 0px 0px 6px #000000;
+    font-size: 17px;
 }
 
 .blog-part-overlay {
     padding: 25px;
-    color: black;
+    color: #ffffff;
     border-radius: 10px;
-    min-height: 190px;
+    min-height: 220px;
     width: 100%;
     transition: 0.7s;
     background: rgba(37, 177, 119, 0.1);
@@ -1068,3 +1069,21 @@ http://www.tooplate.com/view/2106-soft-landing
     border-top-right-radius: 15px;
 }
 
+/* course list */
+
+.collapse-course-list-btn {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    transition: 1s;
+}
+
+.collapse-course-list-btn:hover {
+    color: #00ff80;
+}
+
+.collapse-content-inner-wrapper {
+    padding: 15px;
+}

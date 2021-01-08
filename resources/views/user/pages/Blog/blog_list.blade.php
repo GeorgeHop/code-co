@@ -17,7 +17,7 @@
             @foreach($posts as $post)
                 <div class="col-md-4 col-sm-4">
                     <a href="{{ route('single', $post) }}">
-                        <div class="blog-part">
+                        <div class="blog-part" style="background-image: url('{{ URL::asset($post->thumbnail) }}');">
                             <div class="blog-part-overlay">{{ $post['title'] }}</div>
                         </div>
                     </a>

@@ -27,5 +27,5 @@
         @enderror
         <button type="submit" class="form-control">Отправить</button>
     </form>
-    <p>Если нет аккаунта <a>Registration</a></p>
+    <p>Нет аккаунта ? <a href="{{ route('registration') }}">Registration</a></p>
 @endsection

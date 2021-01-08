@@ -57,5 +57,5 @@
         @enderror
         <button type="submit" class="form-control">Отправить</button>
     </form>
-    <p>Есть аккаунт ? <a>Log in</a></p>
+    <p>Есть аккаунт ? <a href="{{ route('login') }}">Log in</a></p>
 @endsection

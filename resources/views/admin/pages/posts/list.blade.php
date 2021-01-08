@@ -6,6 +6,7 @@
         <thead>
         <tr>
             <th scope="col">id</th>
+            <th scope="col">Видимость</th>
             <th scope="col">Тайтл</th>
             <th scope="col">Автор</th>
             <th scope="col">Действие</th>
@@ -14,7 +15,8 @@
         <tbody>
         @foreach($posts as $post)
             <tr>
-                <th scope="row">{{ $post->id }}</th>
+                <td>{{ $post->id }}</td>
+                <td>{{ $post->is_visible_for_all == 1 ? 'Виден всем' : 'Виден только юзерам'}}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->author }}</td>
                 <td>

@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('author');
             $table->text('description');
             $table->string('thumbnail')->nullable();
+            $table->boolean('is_visible_for_all')->default(false);
             $table->timestamps();
         });
     }

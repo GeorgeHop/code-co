@@ -29,7 +29,7 @@
                                     </div>
                                     <div class="pricing-bottom">
                                         <span class="pricing-dollar">{{ $course['cost'] }}</span>
-                                        <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Register now</a>
+                                        <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Подробности</a>
                                     </div>
                                 </div>
                             </div>

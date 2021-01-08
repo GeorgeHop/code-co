@@ -39,6 +39,8 @@ class PostsController extends Controller
             'title' => ['required', 'min:3', 'max:30'],
             'description' => ['required', 'min:10'],
             'author' => ['required', 'min:3', 'max:30'],
+            'is_visible_for_all' => 'boolean',
+            'thumbnail' => 'string'
         ]);
     }
 }
