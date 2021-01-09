@@ -52,7 +52,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Юзеры</a>
+                    <a href="{{ route('admin.users.index') }}">Юзеры</a>
                 </li>
                 <li>
                     <a href="{{ route('admin.posts.index') }}">Блог</a>
