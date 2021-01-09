@@ -3,62 +3,61 @@
 @section('content')
     <section class="custom-section">
         <div class="container">
-            <div class="col-md-12 col-sm-12">
-                <div class="section-title">
-                    <h1>Контакты</h1>
-                </div>
+            <div class="section-title section-title-margin-top">
+                <h1>Контакты</h1>
             </div>
-        </div>
-        <div class="container">
             <div class="accordion" id="accordionExample">
                 <div class="card-collapse">
-                    <div class="card-header" id="headingOne">
+                    <div class="card-header" id="one">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="collapse-course-list-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Telegram
                             </button>
                         </h2>
                     </div>
 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div>
-                            link on telegram
+                    <div id="collapseOne" class="collapse" aria-labelledby="one" data-parent="#accordionExample">
+                        <div class="collapse-content-inner-wrapper">
+                            <h3>Название аккаунта</h3>
+                            <p>
+                                ссылка на аккаунт
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="card-collapse">
-                    <div class="card-header" id="headingTwo">
+                    <div class="card-header" id="two">
                         <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="collapse-course-list-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Instagram
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="two" data-parent="#accordionExample">
+                        <div class="collapse-content-inner-wrapper">
+                            <h3>Название аккаунта</h3>
+                            <p>
+                                Тут у нас важные посты о всем самом интересном: ссылка на аккаунт
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-collapse">
+                    <div class="card-header" id="three">
+                        <h2 class="mb-0">
+                            <button class="collapse-course-list-btn" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Viber
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div>
-                            Link on viber
-                        </div>
-                    </div>
-                </div>
-                <div class="card-collapse">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Collapsible Group Item #3
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div>
-                            Anim pariatur cliche reprehender
-                            it, enim eiusmod high life accusamu
-                            s terry richardson ad squid. 3 wolf moon officia
-                            aute, non cupidatat skateboard dolor brunch. Food truck quinoa n
-                            esciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                            bird on it squid single-origin coffee nulla assumenda shore
-                            ditch et. Nihil anim keffiyeh helvetica, craft beer labore wes and
-                            erson cred nesciunt sapiente ea proident. Ad vegan excepteur but
-                            cher vice lomo. Leggings occaecat craft beer farm-to-table, raw d
+
+                    <div id="three" class="collapse" aria-labelledby="three" data-parent="#accordionExample">
+                        <div class="collapse-content-inner-wrapper">
+                            <h3>Название аккаунта</h3>
+                            <p>
+                                Ну а тут всеми любимый фейсбук: ссылка на аккаунт
+                            </p>
                         </div>
                     </div>
                 </div>
