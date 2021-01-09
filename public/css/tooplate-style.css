@@ -1087,3 +1087,21 @@ http://www.tooplate.com/view/2106-soft-landing
 .collapse-content-inner-wrapper {
     padding: 15px;
 }
+
+.col-centered {
+    float: none;
+    margin: 0 auto 350px;
+}
+
+.post-thumbnail {
+    max-width: 100%;
+    max-height: 150px;
+    background-repeat: no-repeat;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    height: 500px;
+}
