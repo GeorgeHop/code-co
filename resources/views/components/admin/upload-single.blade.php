@@ -4,7 +4,7 @@
     </h4>
     <div class="card mt-0">
         <img
-            class="card-img-top"
+            class="card-img-top img-thumbnail"
             src="{{ $value ?? 'https://via.placeholder.com/500/CCCCCC/FFFFFF?Text=Obrazek' }}"
             alt="{{ $name }}"
             data-file-upload="preview"
