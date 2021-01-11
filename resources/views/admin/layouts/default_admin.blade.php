@@ -57,6 +57,18 @@
                 <li>
                     <a href="{{ route('admin.posts.index') }}">Блог</a>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Настройки сайта<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Настройки сайта</li>
+                        <li><a href="#">Данные сайта</a></li>
+                    </ul>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Редактируемые страницы</li>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Редактор контента</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 

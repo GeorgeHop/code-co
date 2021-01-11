@@ -24,7 +24,7 @@
                                         <h2>{{ $course['name'] }}</h2>
                                     </div>
                                     <div class="pricing-info">
-                                        <p>{{ $course['info'] }}</p>
+                                        {!! $course->info !!}
                                         <p>{{ $course['duration'] }}/ дней</p>
                                     </div>
                                     <div class="pricing-bottom">

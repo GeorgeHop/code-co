@@ -14,8 +14,8 @@ class CoursesMaterial extends Model
 {
     use HasFactory;
 
-    public function course()
+    public function videos()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsTo(CoursesVideo::class);
     }
 }

@@ -14,15 +14,18 @@ class Course extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'cost',
+        'duration',
+        'info',
+        'author_id',
+        'is_on_homepage'
+    ];
 
     public function videos()
     {
         return $this->hasMany(CoursesVideo::class);
-    }
-
-    public function materials()
-    {
-        return $this->hasMany(CoursesMaterial::class);
     }
 
     public function users()

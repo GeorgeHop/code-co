@@ -1022,6 +1022,20 @@ http://www.tooplate.com/view/2106-soft-landing
     margin: 5px;
 }
 
+.main-courses {
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.41);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.main-courses:hover {
+    -webkit-box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.57);
+    box-shadow: 0px 0px 33px 7px rgba(0,0,0,0.57);
+}
+
 .card-custom:hover {
     background-color: #c1c1c1;
 }

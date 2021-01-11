@@ -15,13 +15,13 @@ class CreateCoursesMaterials extends Migration
     {
         Schema::create('courses_materials', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('video_id');
             $table->string('title');
             $table->string('description');
             $table->string('link');
             $table->timestamps();
 
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('video_id')->references('id')->on('courses_videos');
         });
     }
 

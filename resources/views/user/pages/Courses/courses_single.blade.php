@@ -11,11 +11,11 @@
                     </div>
                 </div>
 
-
                 <div class="container">
                     <div class="section-title section-title-margin-top">
                         <h1>Расписание курса</h1>
                     </div>
+                    @dump($course->videos[1]->materials)
                     <div class="accordion" id="accordionExample">
                         <div class="card-collapse">
                             <div class="card-header" id="one">

@@ -30,64 +30,37 @@
     <section id="feature" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
                         <h1>Что вы можете выучить с нами ?</h1>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6 main-courses">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Web разработка</a></li>
-
-                        <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Mobile App разработка</a></li>
-
-                        <li><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Full-stack разработка</a></li>
-
-                        <li><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">React разработчик</a></li>
+                        @foreach($courses as $course)
+                            <li class="{{ $loop->index === 0 ? 'active' : '' }}"><a href="#tab{{ $course->id }}" aria-controls="tab{{ $course->id }}" role="tab" data-toggle="tab">{{ $course->name }}</a></li>
+                        @endforeach
                     </ul>
 
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tab01" role="tabpanel">
-                            <div class="tab-pane-item">
-                                <h2>Minimal Design</h2>
-                                <p>Nam feugiat a ante sollicitudin luctus. Quisque eget placerat massa. Ut quis ligula ornare, pellentesque velit eget, vestibulum est. Donec pretium tristique elit eget sodales. Pellentesque posuere.</p>
+                        @foreach($courses as $course)
+                            <div class="tab-pane {{ $loop->index === 0 ? 'active' : '' }}" id="tab{{ $course->id }}" role="tabpanel">
+                                <div class="tab-pane-item">
+                                    <h2>{{ $course->name }}</h2>
+                                    {!! $course->info !!}
+                                </div>
                             </div>
-                            <div class="tab-pane-item">
-                                <h2>Easy to use</h2>
-                                <p>Aliquam massa massa, consectetur non mattis fringilla, sodales ac turpis. Morbi ac felis sagittis, faucibus mauris vitae, placerat mauris.</p>
+                        @endforeach
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Мало курсов ?</h3>
                             </div>
-                        </div>
-
-
-                        <div class="tab-pane" id="tab02" role="tabpanel">
-                            <div class="tab-pane-item">
-                                <h2>Compatible Browsers</h2>
-                                <p>Nam maximus elit a metus luctus, a faucibus magna mattis. Ut malesuada viverra iaculis. Nunc euismod sit amet neque a tincidunt.</p>
-                            </div>
-                            <div class="tab-pane-item">
-                                <h2>User Friendly</h2>
-                                <p>Maecenas maximus velit lorem, quis pharetra turpis fringilla id. Vestibulum tempor facilisis efficitur. Sed nec nisi sit amet nibh pellentesque elementum.</p>
-                            </div>
-                            <div class="tab-pane-item">
-                                <h2>HTML5 & CSS3</h2>
-                                <p>In viverra ipsum ornare sapien rhoncus ullamcorper. Vivamus vitae risus ac mi vehicula sagittis. Nulla dictum magna sit amet pharetra aliquam.</p>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane" id="tab03" role="tabpanel">
-                            <div class="tab-pane-item">
-                                <h2>Quick Support</h2>
-                                <p>Mauris rutrum est at fringilla pulvinar. Nam ligula urna, lobortis non scelerisque vel, molestie eu massa. Nullam mattis elit at tortor accumsan.</p>
-                            </div>
-                            <div class="tab-pane-item">
-                                <h2>Managed Stuffs</h2>
-                                <p>Quisque ullamcorper sem quis sapien cursus efficitur. Sed id sodales ipsum. Morbi eleifend tempus erat sit amet vehicula. Nulla at posuere tellus, non mattis erat. Nulla id massa gravida.</p>
+                            <div class="col-md-12">
+                                <a class="form-control" href="{{ route('courses.list') }}">Переходи к списку всех курсов</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="col-md-6 col-sm-6">

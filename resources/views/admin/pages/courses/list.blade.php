@@ -22,7 +22,7 @@
                     <td>{{ $course->name }}</td>
                     <td>{{ $course->author_id }}</td>
                     <td>
-                        <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.courses.show', $course->id) }}">Edit</a>
+                        <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.courses.edit', $course->id) }}">Edit</a>
                         <form class="buttons-actions" method="POST" action="">
                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                         </form>

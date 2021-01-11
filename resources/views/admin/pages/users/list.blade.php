@@ -1,7 +1,7 @@
 @extends('admin.layouts.default_admin')
 
 @section('content')
-    <a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.users.create') }}">Добавить новый пост</a>
+{{--    <a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.users.create') }}">Добавить новый пост</a>--}}
     <table class="table">
         <thead>
         <tr>
