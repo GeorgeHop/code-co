@@ -9,12 +9,22 @@
         @endif
         <div class="form-group">
             <label for="title">Заголовок</label>
+            @error('title')
+            <div class="alert alert-danger">
+                <p>{{$errors->first('title')}}</p>
+            </div>
+            @enderror
             <input type="text" class="form-control" id="title" name="title" value="{{ old('title') ?? $post->title }}" placeholder="Добавьте заголовок" required>
         </div>
         <div class="form-group">
             <div class="row">
                 <div class="col-md-6">
                     <label for="author">Автор</label>
+                    @error('author')
+                    <div class="alert alert-danger">
+                        <p>{{$errors->first('author')}}</p>
+                    </div>
+                    @enderror
                     <input type="text" class="form-control" id="author" name="author" value="{{ old('author') ?? $post->author }}" placeholder="Автор" required/>
                 </div>
 
@@ -30,6 +40,11 @@
         </div>
         <div class="form-group">
             <label for="description">Текст поста</label>
+            @error('description')
+            <div class="alert alert-danger">
+                <p>{{$errors->first('description')}}</p>
+            </div>
+            @enderror
             <textarea
                 class="form-control tinymce"
                 id="description"
@@ -38,6 +53,11 @@
             >{{ old('description') ?? $post->description }}</textarea>
         </div>
         <div class="form-group">
+            @error('thumbnail')
+            <div class="alert alert-danger">
+                <p>{{$errors->first('thumbnail')}}</p>
+            </div>
+            @enderror
             <x-admin.upload-single label="Изображение" name="thumbnail" :value="$post->thumbnail"/>
         </div>
         <button type="submit" class="btn btn-primary">Сохранить</button>

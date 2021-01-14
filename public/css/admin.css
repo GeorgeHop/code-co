@@ -319,6 +319,7 @@ html { height: 100%;}
     background: white;
     -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
     box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    margin-bottom: 30px;
 }
 
 .buttons-actions {

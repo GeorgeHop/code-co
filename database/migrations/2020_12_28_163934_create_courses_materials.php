@@ -18,7 +18,6 @@ class CreateCoursesMaterials extends Migration
             $table->unsignedBigInteger('video_id');
             $table->string('title');
             $table->string('description');
-            $table->string('link');
             $table->timestamps();
 
             $table->foreign('video_id')->references('id')->on('courses_videos');

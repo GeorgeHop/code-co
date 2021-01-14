@@ -20,7 +20,8 @@ class Course extends Model
         'duration',
         'info',
         'author_id',
-        'is_on_homepage'
+        'is_on_homepage',
+        'thumbnail'
     ];
 
     public function videos()

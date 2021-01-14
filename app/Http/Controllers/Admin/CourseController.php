@@ -17,7 +17,7 @@ class CourseController extends Controller
 
     public function edit(Course $course)
     {
-        return view('admin.pages.courses.edit', ['course' => $course, 'edit' => true] );
+        return view('admin.pages.courses.edit', ['course' => $course->loadMissing('videos.materials'), 'edit' => true] );
     }
 
     public function update(Course $course)
@@ -28,7 +28,7 @@ class CourseController extends Controller
 
     public function create(Course $course)
     {
-        return view('admin.pages.courses.edit', ['course' => $course, 'edit' => false]);
+        return view('admin.pages.courses.edit', ['course' => $course->loadMissing('videos.materials'), 'edit' => false]);
     }
 
     public function store()
@@ -59,7 +59,8 @@ class CourseController extends Controller
             'info' => 'required|min:10|max:300',
             'duration' => 'required|min:1',
             'is_on_homepage' => 'nullable',
-            'cost' => 'required'
+            'cost' => 'required',
+            'thumbnail' => 'string'
         ]);
     }
 }

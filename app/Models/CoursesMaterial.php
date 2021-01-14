@@ -14,6 +14,11 @@ class CoursesMaterial extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description'
+    ];
+
     public function videos()
     {
         return $this->belongsTo(CoursesVideo::class);
