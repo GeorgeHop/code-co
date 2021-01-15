@@ -693,6 +693,10 @@ http://www.tooplate.com/view/2106-soft-landing
       justify-content: center;
   }
 
+  .description-min-height {
+      min-height: 300px;
+  }
+
 
 
   /*---------------------------------------
@@ -1133,7 +1137,7 @@ http://www.tooplate.com/view/2106-soft-landing
 
 .thumbnail-card {
     min-width: 150px;
-    min-height: 350px;
+    height: 100%;
     padding: 15px;
     border-radius: 15px;
     background: white;
@@ -1142,6 +1146,24 @@ http://www.tooplate.com/view/2106-soft-landing
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
+}
+
+.buy-courses-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    font-size: 18px;
+    background: #29ca8e;
+    color: white;
+    padding: 15px;
+    text-shadow: 0px 0px 4px #000000;
+    cursor: pointer;
+}
+
+.buy-courses-button:hover {
+    color: #d9534f;
+    background: #419869;
 }
 
 @keyframes float {

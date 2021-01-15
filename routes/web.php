@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserPanelController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 
@@ -39,7 +40,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/user-panel', function () {return view('user.pages.UserPanel.user_main');})->name('user.panel');
+    Route::get('/user-panel', [UserPanelController::class, 'index'])->name('user.panel');
     Route::get('/user-course-list', function () {return view('user.pages.UserPanel.user_course_list');});
 });
 

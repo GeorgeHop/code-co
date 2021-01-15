@@ -24,7 +24,16 @@
                                         </div>
                                         <div class="col-md-4 col-sm-4">
                                             <div class="thumbnail-card">
-                                                {!! $course->info !!}
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {!! $course->info !!}
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a class="buy-courses-button">Купить курс</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-1 col-sm-1">
@@ -57,12 +66,12 @@
                                     <div class="collapse-content-inner-wrapper">
                                         <h3>{{ $video->title }}</h3>
                                         <p>
-                                            {{ $video->description }}
+                                            {!! $video->description !!}
                                         </p>
                                         @foreach($video->materials as $material)
                                             <h3>{{ $material->title }}</h3>
                                             <p>
-                                                {{ $material->description }}
+                                                {!! $material->description !!}
                                             </p>
                                         @endforeach
                                     </div>

@@ -28,6 +28,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('posts', PostsController::class);
     Route::resource('courses', CourseController::class);
     Route::resource('users', UserController::class);
+    Route::post('users/{user}/subscribe', [UserController::class, 'subscribeCourse'])->name('users.subscribe');
+    Route::delete('users/{user}/unsubscribe/{course}', [UserController::class, 'unsubscribeCourse'])->name('users.unsubscribe');
     Route::resource('courses/{course}/videos', VideoController::class);
     Route::resource('courses/{course}/videos/{video}/material', MaterialController::class);
 
