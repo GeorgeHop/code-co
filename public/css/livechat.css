@@ -183,6 +183,10 @@
   align-items: baseline;
 }
 
+.chat-box .chat-box-inner .chat-box-footer form {
+  display: flex;
+}
+
 .chat-box .chat-box-inner .chat-box-footer .chat-input {
   width: 100%;
   height: 40px;

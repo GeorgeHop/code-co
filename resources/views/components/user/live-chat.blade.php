@@ -40,7 +40,10 @@
             </div>
         </div>
         <div class="chat-box-footer">
-            <input class="chat-input"><button class="chat-submit">></button>
+            <form id="send-message" action="{{ route('live-chat.send') }}" method="POST">
+                @csrf
+                <input class="chat-input" type="text" name="message"><button class="chat-submit" type="submit">></button>
+            </form>
         </div>
     </div>
 </div>
