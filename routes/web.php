@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LiveChatController;
 use App\Http\Controllers\UserPanelController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,9 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/user-panel');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
+
+Route::view('live-chat', 'testchat');
+Route::post('live-chat/send', [LiveChatController::class, 'send'])->name('live-chat.send');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/user-panel', [UserPanelController::class, 'index'])->name('user.panel');
