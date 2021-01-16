@@ -21,6 +21,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="../css/tooplate-style.css">
+    <link rel="stylesheet" href="../css/livechat.css">
     <title>{{ config('app.name') }}</title>
 </head>
 <body>
@@ -96,6 +97,8 @@
 @yield('default_user')
 @yield('auth_user')
 
+<x-user.live-chat/>
+
 <footer id="footer" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row">
@@ -126,6 +129,7 @@
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/smoothscroll.js"></script>
 <script src="/js/custom.js"></script>
+<script src="/js/web.js"></script>
 </body>
 </html>
 

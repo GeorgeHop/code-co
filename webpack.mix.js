@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/admin', 'public/js')
     .js('resources/js/web', 'public/js')
+    .sass('resources/sass/livechat.scss', 'public/css')
     .copy('node_modules/tinymce/skins', 'public/js/skins')
     .copy('node_modules/tinymce/icons', 'public/js/icons');

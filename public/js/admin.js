@@ -74036,14 +74036,26 @@ $('[data-toggle="offcanvas"]').click(function () {
 
 /***/ }),
 
+/***/ "./resources/sass/livechat.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/livechat.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**********************************!*\
-  !*** multi ./resources/js/admin ***!
-  \**********************************/
+/*!*****************************************************************!*\
+  !*** multi ./resources/js/admin ./resources/sass/livechat.scss ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\code-co\resources\js\admin */"./resources/js/admin/index.js");
+__webpack_require__(/*! D:\Development\CurrentProjects\code-co\resources\js\admin */"./resources/js/admin/index.js");
+module.exports = __webpack_require__(/*! D:\Development\CurrentProjects\code-co\resources\sass\livechat.scss */"./resources/sass/livechat.scss");
 
 
 /***/ })

@@ -8225,7 +8225,7 @@ __webpack_require__.r(__webpack_exports__);
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "somekey",
+  key: "",
   wsHost: window.location.hostname,
   wsPort: 6001,
   forceTLS: false,
@@ -8244,6 +8244,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
 __webpack_require__(/*! ./bootstrap */ "./resources/js/web/bootstrap.js");
 
 __webpack_require__(/*! ./live-chat */ "./resources/js/web/live-chat.js");
+
+__webpack_require__(/*! ./liveChatUI */ "./resources/js/web/liveChatUI.js");
 
 /***/ }),
 
@@ -8277,6 +8279,24 @@ if (container && form) {
 
 /***/ }),
 
+/***/ "./resources/js/web/liveChatUI.js":
+/*!****************************************!*\
+  !*** ./resources/js/web/live-chat-ui.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('#chatButton').click(function () {
+  $('.chat-box').fadeIn();
+  $('#chatButton').fadeOut();
+});
+$('#closeButton').click(function () {
+  $('#chatButton').fadeIn();
+  $('.chat-box').fadeOut();
+});
+
+/***/ }),
+
 /***/ 1:
 /*!********************************!*\
   !*** multi ./resources/js/web ***!
@@ -8284,7 +8304,7 @@ if (container && form) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\code-co\resources\js\web */"./resources/js/web/index.js");
+module.exports = __webpack_require__(/*! D:\Development\CurrentProjects\code-co\resources\js\web */"./resources/js/web/index.js");
 
 
 /***/ })
