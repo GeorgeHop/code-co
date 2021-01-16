@@ -18,7 +18,8 @@ class CoursesVideo extends Model
         'title',
         'description',
         'source',
-        'course_id'
+        'course_id',
+        'video_number'
     ];
 
     public function course()

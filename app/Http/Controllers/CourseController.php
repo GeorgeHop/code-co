@@ -22,4 +22,9 @@ class CourseController extends Controller
     {
         return view('user.pages.courses.courses_single', ['course' => $course->loadMissing('videos.materials')]);
     }
+
+    public function showBuy(Course $course)
+    {
+        return view('user.pages.courses.courses_type', ['course' => $course->loadMissing('videos.materials')]);
+    }
 }

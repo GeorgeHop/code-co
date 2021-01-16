@@ -13,13 +13,26 @@
                 @method('PUT')
             @endif
             <div class="form-group">
-                <label for="title">Заголовок</label>
-                @error('title')
-                <div class="alert alert-danger">
-                    <p>{{$errors->first('title')}}</p>
+                <div class="row">
+                    <div class="col-md-9">
+                        <label for="title">Заголовок</label>
+                        @error('title')
+                        <div class="alert alert-danger">
+                            <p>{{$errors->first('title')}}</p>
+                        </div>
+                        @enderror
+                        <input type="text" class="form-control" id="title" name="title" value="{{ old('title') ?? $video->title }}" placeholder="Добавьте заголовок" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="video_number">Порядковый номер</label>
+                        @error('video_number')
+                        <div class="alert alert-danger">
+                            <p>{{$errors->first('video_number')}}</p>
+                        </div>
+                        @enderror
+                        <input type="text" class="form-control" id="video_number" name="video_number" value="{{ old('video_number') ?? $video->video_number }}" placeholder="Добавьте номер видео" required>
+                    </div>
                 </div>
-                @enderror
-                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') ?? $video->title }}" placeholder="Добавьте заголовок" required>
             </div>
             <div class="form-group">
                 <div class="row">

@@ -39,6 +39,7 @@ class VideoController extends Controller
             'title' => ['required', 'min:3'],
             'description' => ['required', 'min:8'],
             'source' => ['required'],
+            'video_number' => ['required']
         ]);
     }
 }
