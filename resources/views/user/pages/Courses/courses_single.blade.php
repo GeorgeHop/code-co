@@ -31,7 +31,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <a class="buy-courses-button">Купить курс</a>
+                                                        <a class="buy-courses-button" href="{{ route('buy', $course->id) }}">Купить курс</a>
                                                     </div>
                                                 </div>
                                             </div>
