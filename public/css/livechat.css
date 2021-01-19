@@ -1,9 +1,178 @@
 .chat {
   display: flex;
   position: fixed;
-  right: 10px;
-  top: 80%;
+  right: 15px;
+  top: 78%;
   z-index: 1101;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chat .chat-hovered-message {
+  padding: 5px;
+  border-radius: 25px;
+  background: white;
+  bottom: 40px;
+  width: 50px;
+  transition: 1s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat .circle-one,
+.chat .circle-two,
+.chat .circle-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.chat .circle-one {
+  height: 125px;
+  width: 125px;
+  transition: 5s;
+  -webkit-animation: pulse-one 3s infinite;
+          animation: pulse-one 3s infinite;
+}
+
+.chat .circle-one .circle-two {
+  width: 108px;
+  height: 108px;
+  transition: 3s;
+  -webkit-animation: pulse-two 3s infinite;
+          animation: pulse-two 3s infinite;
+}
+
+.chat .circle-one .circle-two .circle-three {
+  -webkit-animation: pulse-three 3s infinite;
+          animation: pulse-three 3s infinite;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 93px;
+  height: 93px;
+}
+
+.chat .circle-one:hover {
+  box-shadow: 0px 0px 10px -3px #000000;
+  background-color: rgba(52, 20, 235, 0.3);
+  -webkit-animation: none;
+          animation: none;
+}
+
+.chat .circle-one:hover .circle-two:hover {
+  box-shadow: 0px 0px 10px -3px #000000;
+  background-color: rgba(52, 20, 235, 0.5);
+  -webkit-animation: none;
+          animation: none;
+}
+
+.chat .circle-one:hover .circle-two:hover .circle-three:hover {
+  box-shadow: 0px 0px 10px -3px #000000;
+  background-color: rgba(52, 20, 235, 0.7);
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes pulse-one {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    background-color: rgba(52, 20, 235, 0.3);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+@keyframes pulse-one {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    background-color: rgba(52, 20, 235, 0.3);
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.7);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+@-webkit-keyframes pulse-two {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px -3px #000000;
+    background-color: rgba(52, 20, 235, 0.5);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+@keyframes pulse-two {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px -3px #000000;
+    background-color: rgba(52, 20, 235, 0.5);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+@-webkit-keyframes pulse-three {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px -3px #000000;
+    background-color: rgba(52, 20, 235, 0.7);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+@keyframes pulse-three {
+  0% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px -3px #000000;
+    background-color: rgba(52, 20, 235, 0.7);
+  }
+
+  100% {
+    background-color: rgba(52, 20, 235, 0);
+  }
+}
+
+.chat:hover .chat-hovered-message {
+  bottom: 135px;
+  width: 100%;
+  top: -50;
 }
 
 .background {
@@ -11,11 +180,12 @@
   border-radius: 50%;
   box-shadow: 0px 0px 10px -3px #000000;
   height: 80px;
-  left: 10px;
   position: absolute;
-  top: 10px;
   width: 80px;
   transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chat:hover .background {

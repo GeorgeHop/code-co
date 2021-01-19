@@ -8225,7 +8225,7 @@ __webpack_require__.r(__webpack_exports__);
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "",
+  key: "oivjoerjfve",
   wsHost: window.location.hostname,
   wsPort: 6001,
   forceTLS: false,
@@ -8245,7 +8245,25 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/web/bootstrap.js");
 
 __webpack_require__(/*! ./live-chat */ "./resources/js/web/live-chat.js");
 
-__webpack_require__(/*! ./liveChatUI */ "./resources/js/web/liveChatUI.js");
+__webpack_require__(/*! ./live-chat-ui */ "./resources/js/web/live-chat-ui.js");
+
+/***/ }),
+
+/***/ "./resources/js/web/live-chat-ui.js":
+/*!******************************************!*\
+  !*** ./resources/js/web/live-chat-ui.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('#chatButton').click(function () {
+  $('.chat-box').fadeIn();
+  $('#chatButton').fadeOut();
+});
+$('#closeButton').click(function () {
+  $('#chatButton').fadeIn();
+  $('.chat-box').fadeOut();
+});
 
 /***/ }),
 
@@ -8276,24 +8294,6 @@ if (container && form) {
     console.log(e);
   });
 }
-
-/***/ }),
-
-/***/ "./resources/js/web/liveChatUI.js":
-/*!****************************************!*\
-  !*** ./resources/js/web/live-chat-ui.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$('#chatButton').click(function () {
-  $('.chat-box').fadeIn();
-  $('#chatButton').fadeOut();
-});
-$('#closeButton').click(function () {
-  $('#chatButton').fadeIn();
-  $('.chat-box').fadeOut();
-});
 
 /***/ }),
 

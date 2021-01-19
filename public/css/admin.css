@@ -326,3 +326,74 @@ html { height: 100%;}
     width: 60px;
     float: left;
 }
+
+.badge-custom {
+    background: #d9534f;
+}
+
+/* live-chat */
+
+.chat-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 15px -8px #000000;
+    box-shadow: inset 0px 0px 15px -8px #000000;
+    padding: 20px;
+    max-height: 600px;
+}
+
+.message-a {
+    padding: 5px;
+    border-radius: 15px;
+    background: blue;
+    color: white;
+    font-size: 17px;
+    -webkit-box-shadow: 0px 0px 15px -8px #000000;
+    box-shadow: 0px 0px 15px -8px #000000;
+    margin: 5px;
+}
+
+.message-b {
+    padding: 5px;
+    border-radius: 15px;
+    background: white;
+    color: black;
+    font-size: 17px;
+    -webkit-box-shadow: 0px 0px 15px -8px #000000;
+    box-shadow: 0px 0px 15px -8px #000000;
+    margin: 5px;
+}
+
+.row-chat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.row-chat-end {
+    justify-content: flex-end;
+}
+
+.admin-chat-input {
+    width: 95%;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 15px -8px #000000;
+    box-shadow: inset 0px 0px 15px -8px #000000;
+    padding: 20px;
+    border: none;
+    margin-top: 10px;
+    outline: none;
+    font-size: 18px;
+}
+
+.admin-chat-button {
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    background: blue;
+    padding: 15px;
+    color: white;
+    height: 100%;
+    font-size: 23px;
+}

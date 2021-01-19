@@ -32,6 +32,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('users/{user}/unsubscribe/{course}', [UserController::class, 'unsubscribeCourse'])->name('users.unsubscribe');
     Route::resource('courses/{course}/videos', VideoController::class);
     Route::resource('courses/{course}/videos/{video}/material', MaterialController::class);
+    Route::view('/live-chat', 'admin.pages.liveChat.live_chat')->name('live-chat');
+    Route::view('/live-chat/single', 'admin.pages.liveChat.single')->name('live-chat-single');
 
     Route::prefix('lfm')->group(function () {
         Lfm::routes();
