@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\User;
+use App\OfferTypes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +18,11 @@ class CourseController extends Controller
 
     public function edit(Course $course)
     {
-        return view('admin.pages.courses.edit', ['course' => $course->loadMissing('videos.materials'), 'edit' => true] );
+        return view('admin.pages.courses.edit', [
+            'course' => $course->loadMissing('videos.materials'),
+            'offers' => $course->loadMissing('offers'),
+            'edit' => true
+        ]);
     }
 
     public function update(Course $course)
@@ -28,7 +33,11 @@ class CourseController extends Controller
 
     public function create(Course $course)
     {
-        return view('admin.pages.courses.edit', ['course' => $course->loadMissing('videos.materials'), 'edit' => false]);
+        return view('admin.pages.courses.edit', [
+            'course' => $course->loadMissing('videos.materials'),
+            'offers' => $course->loadMissing('offers'),
+            'edit' => false
+        ]);
     }
 
     public function store()
@@ -37,11 +46,11 @@ class CourseController extends Controller
         return redirect(route('admin.courses.index'));
     }
 
-    public function destroy(Course $course)
-    {
-        $course->delete();
-        return redirect(route('admin.courses.index'));
-    }
+//    public function destroy(Course $course)
+//    {
+//        $course->delete();
+//        return redirect(route('admin.courses.index'));
+//    }
 
     public function insertCustomData()
     {

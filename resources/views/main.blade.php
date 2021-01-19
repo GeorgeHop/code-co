@@ -126,8 +126,7 @@
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/smoothscroll.js"></script>
 <script src="/js/custom.js"></script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/web.js"></script>
 </body>
 </html>
 

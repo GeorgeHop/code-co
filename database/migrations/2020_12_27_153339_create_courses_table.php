@@ -22,6 +22,7 @@ class CreateCoursesTable extends Migration
             $table->integer('cost');
             $table->string('duration');
             $table->string('thumbnail')->nullable();
+            $table->boolean('is_free')->nullable();
             $table->timestamps();
         });
     }

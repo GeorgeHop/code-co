@@ -43,8 +43,6 @@ Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->mid
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/user-panel', [UserPanelController::class, 'index'])->name('user.panel');
     Route::get('/player/{video}', [UserPanelController::class, 'show'])->name('user.course_list');
-    Route::get('/courses/{course}/buy', [CourseController::class, 'showBuy'])->name('buy');
-    Route::post('order-post', [SubscriptionController::class, 'orderPost']);
 });
 
 Route::get('/test', function () {

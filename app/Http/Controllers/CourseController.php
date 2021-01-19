@@ -20,11 +20,6 @@ class CourseController extends Controller
 
     public function show(Course $course)
     {
-        return view('user.pages.courses.courses_single', ['course' => $course->loadMissing('videos.materials')]);
-    }
-
-    public function showBuy(Course $course)
-    {
-        return view('user.pages.courses.course_payment', ['course' => $course->loadMissing('videos.materials')]);
+        return view('user.pages.courses.courses_single', ['course' => $course->loadMissing('videos.materials'), 'offers' => $course->loadMissing('offers')]);
     }
 }

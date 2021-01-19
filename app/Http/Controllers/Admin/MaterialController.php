@@ -34,6 +34,12 @@ class MaterialController extends Controller
         return redirect(route('admin.videos.edit', [$course, $video]));
     }
 
+    public function destroy($course, $video, CoursesMaterial $material)
+    {
+        $material->delete();
+        return redirect(route('admin.courses.index'));
+    }
+
     public function validateData()
     {
         return request()->validate([

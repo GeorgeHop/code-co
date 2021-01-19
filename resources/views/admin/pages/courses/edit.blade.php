@@ -81,6 +81,44 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
+                        <h2>Предложения</h2><a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.offers.create', [$course->id]) }}">Добавить опции</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Тайтл</th>
+                            <th scope="col">Стоимость</th>
+                            <th scope="col">Действие</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($course->offers as $offer)
+                            <tr>
+                                <th scope="row">{{ $offer->id }}</th>
+                                <td>{{ $offer->title }}</td>
+                                <td>{{ $offer->cost }}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.offers.edit', [$course->id, $offer->id]) }}">Edit</a>
+                                    <form class="buttons-actions" method="POST" action="{{ route('admin.offers.destroy', [$course->id, $offer->id]) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        @endif
+        @if($edit)
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
                         <h2>Список видео в курсе</h2> <a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.videos.create', [$course->id]) }}">Добавить видео</a>
                     </div>
                 </div>
@@ -100,7 +138,9 @@
                                 <td>{{ $video->title }}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.videos.edit', [$course->id, $video->id]) }}">Edit</a>
-                                    <form class="buttons-actions" method="POST" action="">
+                                    <form class="buttons-actions" method="POST" action="{{ route('admin.videos.destroy', [$course->id, $video->id]) }}">
+                                        @csrf
+                                        @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                     </form>
                                 </td>

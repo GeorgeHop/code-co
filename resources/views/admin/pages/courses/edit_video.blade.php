@@ -86,7 +86,9 @@
                                 <td>{{ $material->title }}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.material.edit', [$course->id, $video->id, $material->id]) }}">Edit</a>
-                                    <form class="buttons-actions" method="POST" action="">
+                                    <form class="buttons-actions" method="POST" action="{{ route('admin.material.destroy', [$course->id, $video->id, $material->id]) }}">
+                                        @csrf
+                                        @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                     </form>
                                 </td>

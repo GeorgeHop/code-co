@@ -33,6 +33,12 @@ class VideoController extends Controller
         return redirect(route('admin.courses.index'));
     }
 
+    public function destroy($course, CoursesVideo $video)
+    {
+        $video->delete();
+        return redirect(route('admin.courses.index'));
+    }
+
     public function validateData()
     {
         return request()->validate([

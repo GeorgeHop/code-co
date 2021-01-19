@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\MaterialController;
+use App\Http\Controllers\Admin\OffersController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
@@ -32,6 +33,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('users/{user}/unsubscribe/{course}', [UserController::class, 'unsubscribeCourse'])->name('users.unsubscribe');
     Route::resource('courses/{course}/videos', VideoController::class);
     Route::resource('courses/{course}/videos/{video}/material', MaterialController::class);
+    Route::resource('courses/{course}/offers', OffersController::class);
 
     Route::prefix('lfm')->group(function () {
         Lfm::routes();
