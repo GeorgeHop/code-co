@@ -119,7 +119,7 @@
                 authorizationType : "SimpleSignature",
                 merchantSignature : "b95932786cbe243a76b014846b63fe92",
                 orderReference : offer.id,
-                orderDate : "1415379863",
+                orderDate : Date.now(),
                 amount : offer.cost,
                 currency : offer.currency,
                 productName : course.name + offer.title,

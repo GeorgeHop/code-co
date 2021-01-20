@@ -15,7 +15,7 @@
                         <h3>Запишись на практический индивидуальный курс.</h3>
                         <h1>CodE-co</h1>
                         <form action="" method="get" class="online-form">
-                            <input type="email" name="email" class="form-control" placeholder="Введите свой емейл" required>
+                            <input type="email" name="email" class="form-control" placeholder="Напиши нам " required>
                             <button type="submit" class="form-control">Отправить</button>
                         </form>
                     </div>

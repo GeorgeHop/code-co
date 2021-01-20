@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\MaterialController;
 use App\Http\Controllers\Admin\OffersController;
 use App\Http\Controllers\Admin\PostsController;
+use App\Http\Controllers\Admin\SiteController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('courses/{course}/videos', VideoController::class);
     Route::resource('courses/{course}/videos/{video}/material', MaterialController::class);
     Route::resource('courses/{course}/offers', OffersController::class);
+    Route::resource('site', SiteController::class);
 
     Route::prefix('lfm')->group(function () {
         Lfm::routes();
