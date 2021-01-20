@@ -39,6 +39,125 @@
         <div class="chat-box-inner-welcome">
             <h5>Есть вопрос ?<br/> Просто задайте его :)</h5>
         </div>
+        <div class="chat-box-inner-list">
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box-row">
+                <div class="chat-box-user-image">
+
+                </div>
+                <div class="chat-box-column">
+                    <div class="chat-box-user-name">
+                        User Name
+                    </div>
+                    <div class="chat-box-short-message">
+                        Short message ...
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="chat-box-chat">
             <div class="chat-row">
                 <div class="message message-a">
