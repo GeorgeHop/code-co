@@ -48,7 +48,7 @@
                         <div class="col-md-2"></div>
                         @foreach($course->offers as $offer)
                             <div class="col-md-4">
-                                <div class="pricing-thumb pricing-card">
+                                <div class="pricing-thumb">
                                     <div class="pricing-title">
                                         <h2>{{ $course['name'] }}</h2>
                                         <h3>{{ $offer->title }}</h3>
@@ -61,10 +61,18 @@
                                     <div class="pricing-bottom">
                                         <span class="pricing-dollar">{{ $offer['cost'] }}</span>
 
-                                        @if(Auth::check())
-                                            <button type="button" onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});" class="section-btn pricing-btn">Купить</button>
+                                        @if(auth()->check())
+                                            <button
+                                                type="button"
+                                                onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});"
+                                                class="section-btn pricing-btn"
+                                            >
+                                                Купить
+                                            </button>
                                         @else
-                                            <a class="pricing-link" href="{{ route('registration') }}"><h2>Создайте аккаунт для покупки курса.</h2></a>
+                                            <a class="pricing-link" href="{{ route('login') }}?intended={{ url()->current() }}">
+                                                Войти
+                                            </a>
                                         @endif
                                     </div>
                                 </div>

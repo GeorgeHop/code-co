@@ -58,7 +58,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect('/user-panel');
+            return redirect($request->intended ?? '/user-panel');
         }
 
         return back()->with('message', 'The provided data do not match our records');
