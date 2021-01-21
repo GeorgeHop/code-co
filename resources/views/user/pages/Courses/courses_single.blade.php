@@ -60,7 +60,20 @@
                                     </div>
                                     <div class="pricing-bottom">
                                         <span class="pricing-dollar">{{ $offer['cost'] }}</span>
-                                        <button type="button" onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});" class="section-btn pricing-btn">Купить</button>
+
+                                        @if(auth()->check())
+                                            <button
+                                                type="button"
+                                                onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});"
+                                                class="section-btn pricing-btn"
+                                            >
+                                                Купить
+                                            </button>
+                                        @else
+                                            <a href="{{ route('login') }}?intended={{ url()->current() }}">
+                                                Войти
+                                            </a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
