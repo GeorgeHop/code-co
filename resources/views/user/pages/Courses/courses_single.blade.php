@@ -48,7 +48,7 @@
                         <div class="col-md-2"></div>
                         @foreach($course->offers as $offer)
                             <div class="col-md-4">
-                                <div class="pricing-thumb">
+                                <div class="pricing-thumb pricing-card">
                                     <div class="pricing-title">
                                         <h2>{{ $course['name'] }}</h2>
                                         <h3>{{ $offer->title }}</h3>
@@ -60,7 +60,12 @@
                                     </div>
                                     <div class="pricing-bottom">
                                         <span class="pricing-dollar">{{ $offer['cost'] }}</span>
-                                        <button type="button" onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});" class="section-btn pricing-btn">Купить</button>
+
+                                        @if(Auth::check())
+                                            <button type="button" onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});" class="section-btn pricing-btn">Купить</button>
+                                        @else
+                                            <a class="pricing-link" href="{{ route('registration') }}"><h2>Создайте аккаунт для покупки курса.</h2></a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -113,8 +118,8 @@
     var wayforpay = new Wayforpay();
     var pay = function (offer, course, user) {
         wayforpay.run({
-                merchantSecretKey: 'flk3409refn54t54t*FNJRET',
-                merchantAccount : "test_merch_n1",
+                merchantSecretKey: '0f754fad1b3922bd142a050068e0e2470d35ba70',
+                merchantAccount : "code_co_test",
                 merchantDomainName : "{{ URL::to('/') }}",
                 authorizationType : "SimpleSignature",
                 merchantSignature : "b95932786cbe243a76b014846b63fe92",
