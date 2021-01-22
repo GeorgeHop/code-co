@@ -23,7 +23,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Юзер панель <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Админ панель</a></li>
-                                        <li><a class="dropdown-item" href="/user-panel">Личный кабинет</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('user.panel') }}">Личный кабинет</a></li>
                                     </ul>
                                 </li>
                             @endif

@@ -16,10 +16,9 @@ class CreateCoursesOffers extends Migration
         Schema::create('courses_offers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('course_id');
-            $table->integer('amount');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
-            $table->integer('cost')->nullable();
+            $table->integer('cost');
             $table->string('currency', 3);
             $table->string('type');
             $table->timestamps();

@@ -20,7 +20,7 @@
                                     {!! $course->info !!}
                                 </div>
                                 <div class="pricing-bottom">
-                                    <a href="{{ route('user.course_list', $course->id) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
+                                    <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
                                 </div>
                             </div>
                         </div>

@@ -48,7 +48,7 @@
                         <div class="col-md-2"></div>
                         @foreach($course->offers as $offer)
                             <div class="col-md-4">
-                                <div class="pricing-thumb">
+                                <div class="pricing-thumb pricing-card">
                                     <div class="pricing-title">
                                         <h2>{{ $course['name'] }}</h2>
                                         <h3>{{ $offer->title }}</h3>
@@ -56,15 +56,15 @@
                                     <div class="pricing-info">
                                         {!! $offer->description !!}
 
-                                        <p>{{ $course['duration'] }}/ дней</p>
+                                        <p>{{ $course->duration }}/ дней</p>
                                     </div>
                                     <div class="pricing-bottom">
-                                        <span class="pricing-dollar">{{ $offer['cost'] }}</span>
+                                        <span class="pricing-dollar">{{ $offer->cost }}</span>
 
-                                        @if(auth()->check())
+                                        @if( auth()->check() )
                                             <button
                                                 type="button"
-                                                onclick="pay({{ $offer }},{{ $course }},{{ Auth::user() }});"
+                                                data-wfp="{{ $offer->id }}"
                                                 class="section-btn pricing-btn"
                                             >
                                                 Купить
@@ -120,41 +120,4 @@
             </div>
         </div>
     </section>
-<script id="widget-wfp-script" language="javascript" type="text/javascript" src="https://secure.wayforpay.com/server/pay-widget.js"></script>
-
-<script type="text/javascript">
-    var wayforpay = new Wayforpay();
-    var pay = function (offer, course, user) {
-        wayforpay.run({
-                merchantSecretKey: '0f754fad1b3922bd142a050068e0e2470d35ba70',
-                merchantAccount : "code_co_test",
-                merchantDomainName : "{{ URL::to('/') }}",
-                authorizationType : "SimpleSignature",
-                merchantSignature : "b95932786cbe243a76b014846b63fe92",
-                orderReference : offer.id,
-                orderDate : Date.now(),
-                amount : offer.cost,
-                currency : offer.currency,
-                productName : course.name + offer.title,
-                productPrice : offer.cost,
-                productCount : '1',
-                clientFirstName : "",
-                clientLastName : "",
-                clientEmail : user.email,
-                clientPhone: "",
-                language: "RU",
-                requestType: 'VERIFY'
-            },
-            function (response) {
-// on approved
-            },
-            function (response) {
-// on declined
-            },
-            function (response) {
-// on pending or in processing
-            }
-        );
-    }
-</script>
 @endsection

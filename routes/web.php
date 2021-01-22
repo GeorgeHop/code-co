@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserPanelController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -36,13 +37,15 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return redirect('/user-panel');
+    return redirect(route('user.panel'));
 })->middleware(['auth', 'signed'])->name('verification.verify');
 Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/user-panel', [UserPanelController::class, 'index'])->name('user.panel');
-    Route::get('/player/{video}', [UserPanelController::class, 'show'])->name('user.course_list');
+    Route::post('/generate-payment', [PaymentsController::class, 'generate'])->name('payments.generate');
+    Route::post('/approve-payment', [PaymentsController::class, 'approve']);
+    Route::get('/user-panel/courses', [UserPanelController::class, 'index'])->name('user.panel');
+    Route::get('/user-panel/player/{video}', [UserPanelController::class, 'show'])->name('user.player');
 });
 
 Route::get('/test', function () {

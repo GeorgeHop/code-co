@@ -1,7 +1,7 @@
 @extends('user.layouts.default_user')
 
 @section('content')
-    <section class="custom-section">
+    <section id="player" class="custom-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -20,7 +20,7 @@
             <div class="courses-list-container">
                 @foreach($video->course->videos as $videoListItem)
                     <div class="card-custom card-custom-padding">
-                        <a href="{{ route('user.course_list', $videoListItem->id) }}">
+                        <a href="{{ route('user.player', [$videoListItem->id]) }}">
                             <span class="card-custom-circle">{{ $videoListItem->video_number }}</span> {{ $videoListItem->title }}
                         </a>
                     </div>

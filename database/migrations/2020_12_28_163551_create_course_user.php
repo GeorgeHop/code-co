@@ -15,6 +15,7 @@ class CreateCourseUser extends Migration
     {
         Schema::create('course_user', function (Blueprint $table) {
             $table->id();
+            $table->string('offer_type');
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('course_id')->references('id')->on('courses');

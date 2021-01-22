@@ -635,7 +635,8 @@ http://www.tooplate.com/view/2106-soft-landing
   -----------------------------------------*/
 
   #about .section-title,
-  #pricing .section-title {
+  #pricing .section-title,
+  #player .section-title {
     text-align: center;
   }
 

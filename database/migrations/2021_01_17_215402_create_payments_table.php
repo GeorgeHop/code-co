@@ -17,6 +17,7 @@ class CreatePaymentsTable extends Migration
             $table->id();
             $table->string('user_id');
             $table->string('offer_id');
+            $table->boolean('paid')->default(false);
             $table->boolean('refunded')->default(false);
             $table->timestamps();
         });

@@ -14,8 +14,8 @@ class UserPanelController extends Controller
         return view('user.pages.UserPanel.user_main', ['courses' => Auth::user()->courses]);
     }
 
-    public function show(CoursesVideo $video)
+    public function show(Course $course, CoursesVideo $video)
     {
-        return view('user.pages.UserPanel.user_course_list', ['video' => $video]);
+        return view('user.pages.UserPanel.user_course_list', ['course' => $course, 'video' => $video]);
     }
 }
