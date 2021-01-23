@@ -19,7 +19,7 @@
                     <div class="row">
                         @foreach($courses as $course)
                             <div class="col-md-4 col-sm-6">
-                                <div class="pricing-thumb">
+                                <div class="pricing-thumb pricing-card">
                                     <div class="pricing-title">
                                         <h2>{{ $course['name'] }}</h2>
                                     </div>
