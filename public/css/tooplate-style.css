@@ -890,6 +890,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
   @media only screen and (max-width: 1200px) {
 
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 260px;
+      }
+
     .custom-navbar .navbar-nav {
       margin-left: 3em;
     }
@@ -901,6 +909,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
 
   @media only screen and (max-width: 992px) {
+
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 450px;
+      }
 
     section {
       padding: 60px 0;
@@ -936,6 +952,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
 
   @media screen and (max-width: 767px) {
+
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 450px;
+      }
 
     .section-title {
       padding-bottom: 20px;
@@ -1017,6 +1041,20 @@ http://www.tooplate.com/view/2106-soft-landing
     .testimonial-image,
     .testimonial-info {
       height: 65vh;
+    }
+
+    .carousel-card-container {
+        min-height: 360px;
+    }
+
+    .carousel-card-comment {
+        width: 100%;
+        right: -6px;
+        top: -50px;
+    }
+
+    .carousel-card-user-image {
+        top: 220px;
     }
   }
 

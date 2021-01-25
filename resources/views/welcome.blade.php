@@ -35,6 +35,7 @@
                         <h1>Что вы можете выучить с нами ?</h1>
                     </div>
                 </div>
+            </div>
 
                 <div class="col-md-6 col-sm-6 main-courses">
                     <ul class="nav nav-tabs" role="tablist">
@@ -68,8 +69,6 @@
                         <img src="images/programmer.png" class="img-responsive" alt="Thin Laptop">
                     </div>
                 </div>
-
-            </div>
         </div>
     </section>
 

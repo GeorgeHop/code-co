@@ -31,7 +31,7 @@
     $('.owl-carousel').owlCarousel({
         loop:true,
         items: 3,
-        margin:30,
+        margin:50,
         nav:false,
         // on small screens if autoplay = true card displaying between card
         autoplay: false,
