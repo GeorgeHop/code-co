@@ -91,30 +91,10 @@
 
                                 </div>
                                 <div class="carousel-card-comment">
-                                    <h1>
+                                    <h2 class="carousel-card-comment-text">
                                         User Name
-                                    </h1>
-                                    <p>
-                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
-                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
-                                        fkaldklasklfdsfkaldklasklfds
-                                    </p>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carousel-card-container card-container-animation-two">
-                                <div class="carousel-card-user-image">
-
-                                </div>
-                                <div class="carousel-card-comment">
-                                    <h1>
-                                        User Name
-                                    </h1>
-                                    <p>
+                                    </h2>
+                                    <p class="carousel-card-comment-text">
                                         fkaldklasklfds fkaldklasklfds fkaldklasklfds
                                         fkaldklasklfdsfkaldklasklfds fkaldklasklfds
                                         fkaldklasklfdsfkaldklasklfds
@@ -131,30 +111,10 @@
 
                                 </div>
                                 <div class="carousel-card-comment">
-                                    <h1>
+                                    <h2 class="carousel-card-comment-text">
                                         User Name
-                                    </h1>
-                                    <p>
-                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
-                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
-                                        fkaldklasklfdsfkaldklasklfds
-                                    </p>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carousel-card-container card-container-animation-two">
-                                <div class="carousel-card-user-image">
-
-                                </div>
-                                <div class="carousel-card-comment">
-                                    <h1>
-                                        User Name
-                                    </h1>
-                                    <p>
+                                    </h2>
+                                    <p class="carousel-card-comment-text">
                                         fkaldklasklfds fkaldklasklfds fkaldklasklfds
                                         fkaldklasklfdsfkaldklasklfds fkaldklasklfds
                                         fkaldklasklfdsfkaldklasklfds
