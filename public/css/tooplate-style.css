@@ -1258,6 +1258,36 @@ http://www.tooplate.com/view/2106-soft-landing
     height: 500px;
 }
 
+.user-panel-nav {
+    min-height: 50px;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000000;
+    box-shadow: 0px 0px 15px -5px #000000;
+    display: flex;
+    padding: 10px;
+}
+
+.user-panel-nav-link {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background: #29ca8e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-panel-nav-link:hover {
+    background: black;
+    color: white;
+}
+
 /* course single list */
 
 .course-thumbnail-img {
