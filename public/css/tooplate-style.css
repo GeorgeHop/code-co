@@ -489,7 +489,10 @@ http://www.tooplate.com/view/2106-soft-landing
         top: -65px;
         max-width: 350px;
         padding: 5px 20px 5px 20px;
-        animation: float 3s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite, gradient 20s ease infinite;
+        background: -webkit-linear-gradient(-45deg, #328537, #421b82, #6a1f6d, #164e16);
+        background-size: 400% 400%;
+        opacity: 0.8;
     }
 
     .carousel-card-container:hover {
