@@ -72,5 +72,103 @@
             </div>
         </div>
     </section>
+
+    <section id="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h1>Что о нас говорят</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-one">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h1>
+                                        User Name
+                                    </h1>
+                                    <p>
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-two">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h1>
+                                        User Name
+                                    </h1>
+                                    <p>
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-one">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h1>
+                                        User Name
+                                    </h1>
+                                    <p>
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-two">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h1>
+                                        User Name
+                                    </h1>
+                                    <p>
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 

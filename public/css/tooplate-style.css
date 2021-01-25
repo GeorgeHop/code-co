@@ -437,6 +437,78 @@ http://www.tooplate.com/view/2106-soft-landing
     margin: 10px 0;
   }
 
+  /*
+    reviews
+  */
+
+    #reviews {
+        background: #ffffff;
+    }
+
+    .item {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .carousel-card-user-image {
+        height: 90px;
+        width: 90px;
+        position: relative;
+        top: 30px;
+        left: 35px;
+        border-radius: 50%;
+        background-color: #d9534f;
+    }
+
+    .carousel-card-container {
+        min-height: 250px;
+        max-width: 440px;
+        background: white;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 15px -5px #000000;
+        box-shadow: 0px 0px 15px -5px #000000;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .card-container-animation-one {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .card-container-animation-two {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .carousel-card-comment {
+        min-height: 150px;
+        background: #424242;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 15px -5px #000000;
+        box-shadow: 0px 0px 15px -5px #000000;
+        position: relative;
+        right: -175px;
+        top: -65px;
+        max-width: 350px;
+        padding: 5px 20px 5px 20px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .carousel-card-container:hover {
+        animation: none;
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+
+    .carousel-card-comment h1 {
+        font-size: 19px;
+    }
+
+    .carousel-card-comment p {
+        font-size: 13px;
+    }
+
+    .carousel-card-comment h1, p {
+        color: white;
+    }
 
 
   /*---------------------------------------
