@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="chat-box-chat">
+        <div id="live-chat-messages" class="chat-box-chat">
             <div class="chat-row">
                 <div class="message message-a">
                     fasfdsafdsa
@@ -171,9 +171,10 @@
             </div>
         </div>
         <div class="chat-box-footer">
-            <form id="send-message" action="{{ route('live-chat.send') }}" method="POST">
+            <form id="live-chat-send-message" action="{{ route('live-chat.send') }}" method="POST">
                 @csrf
-                <input class="chat-input" type="text" name="message"><button class="chat-submit" type="submit">></button>
+                <input class="chat-input" type="text" name="message"/>
+                <button class="chat-submit" type="submit">></button>
             </form>
         </div>
     </div>

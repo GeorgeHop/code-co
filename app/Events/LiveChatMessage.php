@@ -4,6 +4,7 @@ namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -18,12 +19,19 @@ class LiveChatMessage implements ShouldBroadcast
     public $message;
 
     /**
+     * @var string|int ID of user who is in live chat room or session ID if user not logged in
+     */
+    private $authenticator;
+
+    /**
      * Create a new event instance.
      *
+     * @param  string|int  $authenticator
      * @param  string  $message
      */
-    public function __construct(string $message) {
+    public function __construct($authenticator, string $message) {
         $this->message = $message;
+        $this->authenticator = $authenticator;
     }
 
     /**
@@ -32,6 +40,7 @@ class LiveChatMessage implements ShouldBroadcast
      * @return \Illuminate\Broadcasting\Channel|array
      */
     public function broadcastOn() {
-        return new Channel('live-chat');
+        $channel = (is_numeric($this->authenticator)) ? PrivateChannel::class : Channel::class;
+        return new $channel('live-chat.' . $this->authenticator);
     }
 }

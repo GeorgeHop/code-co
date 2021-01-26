@@ -43,7 +43,6 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 })->middleware(['auth', 'signed'])->name('verification.verify');
 Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
-Route::view('live-chat', 'testchat');
 Route::post('live-chat/send', [LiveChatController::class, 'send'])->name('live-chat.send');
 
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -9,13 +9,15 @@ use Illuminate\Http\Request;
 class LiveChatController
 {
     public function send(Request $request): JsonResponse {
-        LiveChatMessage::dispatch($this->validateMessage($request)['message']);
+        $data = $this->validateMessage($request);
+        LiveChatMessage::dispatch($data['authenticator'], $data['message']);
         return response()->json();
     }
 
     private function validateMessage(Request $request): array {
         return $request->validate([
             'message' => ['required', 'max: 5000'],
+            'authenticator' => ['required'],
         ]);
     }
 }

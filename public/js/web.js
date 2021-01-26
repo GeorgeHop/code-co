@@ -8228,7 +8228,7 @@ window.wayforpay = new Wayforpay();
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "oivjoerjfve",
+  key: "somekey",
   wsHost: window.location.hostname,
   wsPort: 6001,
   forceTLS: false,
@@ -8248,27 +8248,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/web/bootstrap.js");
 
 __webpack_require__(/*! ./live-chat */ "./resources/js/web/live-chat.js");
 
-__webpack_require__(/*! ./live-chat-ui */ "./resources/js/web/live-chat-ui.js");
-
 __webpack_require__(/*! ./wayForPayWidget */ "./resources/js/web/wayForPayWidget.js");
-
-/***/ }),
-
-/***/ "./resources/js/web/live-chat-ui.js":
-/*!******************************************!*\
-  !*** ./resources/js/web/live-chat-ui.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$('#chatButton').click(function () {
-  $('.chat-box').fadeIn();
-  $('#chatButton').fadeOut();
-});
-$('#closeButton').click(function () {
-  $('#chatButton').fadeIn();
-  $('.chat-box').fadeOut();
-});
 
 /***/ }),
 
@@ -8276,26 +8256,34 @@ $('#closeButton').click(function () {
 /*!***************************************!*\
   !*** ./resources/js/web/live-chat.js ***!
   \***************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-
-var container = document.getElementById('messages');
-var form = document.getElementById('send-message');
+var $chatButton = $('#chatButton');
+var $closeButton = $('#closeButton');
+var $chatBox = $('.chat-box');
+$chatButton.on('click', function () {
+  $chatBox.fadeIn();
+  $chatButton.fadeOut();
+});
+$closeButton.on('click', function () {
+  $chatButton.fadeIn();
+  $chatBox.fadeOut();
+});
+var container = document.getElementById('live-chat-messages');
+var form = document.getElementById('live-chat-send-message');
 
 if (container && form) {
+  var userId = document.getElementById('user-id').value;
+  var messageInput = form.querySelector('input[name="message"]');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log(form.querySelector('input').value);
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(form.getAttribute('action'), {
-      message: form.querySelector('input[name="message"]').value
+    axios.post(form.getAttribute('action'), {
+      message: messageInput.value,
+      authenticator: userId
     });
   });
-  Echo.channel("live-chat").listen('LiveChatMessage', function (e) {
+  Echo[isNaN(userId) ? 'channel' : 'private']("live-chat.".concat(userId)).listen('LiveChatMessage', function (e) {
     console.log(e);
   });
 }
@@ -8365,7 +8353,7 @@ $('button[data-wfp]').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Development\CurrentProjects\code-co\resources\js\web */"./resources/js/web/index.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\code-co\resources\js\web */"./resources/js/web/index.js");
 
 
 /***/ })

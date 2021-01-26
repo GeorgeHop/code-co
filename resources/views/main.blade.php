@@ -22,7 +22,10 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/tooplate-style.css">
     <link rel="stylesheet" href="/css/livechat.css">
+
     <title>{{ config('app.name') }}</title>
+
+    <input type="hidden" id="user-id" value="{{ auth()->id() ?? session()->getId() }}"/>
 </head>
 <body>
 <!-- PRE LOADER -->
