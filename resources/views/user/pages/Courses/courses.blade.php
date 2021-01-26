@@ -4,44 +4,40 @@
     <section id="pricing" class="custom-section" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
                         <h1>Выберите курс !</h1>
                     </div>
                 </div>
+            </div>
 
+                <?php
+                $cols = 3;
+                $rows = 0;
+                ?>
                 <div class="row">
-                    <?php
-                    $cols = 3;
-                    $rows = 0;
-                    ?>
-                    <div class="row">
-                        @foreach($courses as $course)
-                            <div class="col-md-4 col-sm-6">
-                                <div class="pricing-thumb">
-                                    <div class="pricing-title">
-                                        <h2>{{ $course['name'] }}</h2>
-                                    </div>
-                                    <div class="pricing-info">
-                                        {!! $course->info !!}
-                                        <p>{{ $course['duration'] }}/ дней</p>
-                                    </div>
-                                    <div class="pricing-bottom">
-                                        <span class="pricing-dollar">{{ $course['cost'] }}</span>
-                                        <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Подробности</a>
-                                    </div>
+                    @foreach($courses as $course)
+                        <div class="col-md-4 col-sm-6">
+                            <div class="pricing-thumb pricing-card">
+                                <div class="pricing-title">
+                                    <h2>{{ $course['name'] }}</h2>
+                                </div>
+                                <div class="pricing-info">
+                                    {!! $course->info !!}
+                                    <p>{{ $course['duration'] }}/ дней</p>
+                                </div>
+                                <div class="pricing-bottom">
+                                    <span class="pricing-dollar">{{ $course['cost'] }}</span>
+                                    <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Подробности</a>
                                 </div>
                             </div>
-                            <?php
-                                $rows++;
-                                if ($rows % $cols == 0) echo '</div><div class="row">';
-                            ?>
-                        @endforeach
-                    </div>
+                        </div>
+                        <?php
+                        $rows++;
+                        if ($rows % $cols == 0) echo '</div><div class="row">';
+                        ?>
+                    @endforeach
                 </div>
-
-            </div>
         </div>
     </section>
 

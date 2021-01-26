@@ -15,7 +15,7 @@
                         <h3>Запишись на практический индивидуальный курс.</h3>
                         <h1>CodE-co</h1>
                         <form action="" method="get" class="online-form">
-                            <input type="email" name="email" class="form-control" placeholder="Введите свой емейл" required>
+                            <input type="email" name="email" class="form-control" placeholder="Напиши нам " required>
                             <button type="submit" class="form-control">Отправить</button>
                         </form>
                     </div>
@@ -35,6 +35,7 @@
                         <h1>Что вы можете выучить с нами ?</h1>
                     </div>
                 </div>
+            </div>
 
                 <div class="col-md-6 col-sm-6 main-courses">
                     <ul class="nav nav-tabs" role="tablist">
@@ -68,7 +69,63 @@
                         <img src="images/programmer.png" class="img-responsive" alt="Thin Laptop">
                     </div>
                 </div>
+        </div>
+    </section>
 
+    <section id="reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h1>Что о нас говорят</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-one">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h2 class="carousel-card-comment-text">
+                                        User Name
+                                    </h2>
+                                    <p class="carousel-card-comment-text">
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-card-container card-container-animation-one">
+                                <div class="carousel-card-user-image">
+
+                                </div>
+                                <div class="carousel-card-comment">
+                                    <h2 class="carousel-card-comment-text">
+                                        User Name
+                                    </h2>
+                                    <p class="carousel-card-comment-text">
+                                        fkaldklasklfds fkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds fkaldklasklfds
+                                        fkaldklasklfdsfkaldklasklfds
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

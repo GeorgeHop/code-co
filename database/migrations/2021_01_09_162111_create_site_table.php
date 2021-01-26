@@ -15,7 +15,6 @@ class CreateSiteTable extends Migration
     {
         Schema::create('site', function (Blueprint $table) {
             $table->string('site_name');
-            $table->string('site_url');
             $table->string('mail_box');
             $table->string('telegram');
             $table->string('telegram_description');

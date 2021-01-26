@@ -3,8 +3,18 @@
 @section('content')
     <section class="custom-section">
         <div class="container">
-            <div class="section-title section-title-margin-top">
-                <h1>Контакты</h1>
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6 row-justify-content-center section-title-margin-top">
+                    <div class="section-title">
+                        <h1>Контакты</h1>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
             </div>
             <div class="accordion" id="accordionExample">
                 <div class="card-collapse">

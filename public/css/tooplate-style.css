@@ -437,7 +437,81 @@ http://www.tooplate.com/view/2106-soft-landing
     margin: 10px 0;
   }
 
+  /*
+    reviews
+  */
 
+    #reviews {
+        background: #ffffff;
+    }
+
+    .item {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .carousel-card-user-image {
+        height: 90px;
+        width: 90px;
+        position: relative;
+        top: 30px;
+        left: 35px;
+        border-radius: 50%;
+        background-color: #d9534f;
+    }
+
+    .carousel-card-container {
+        min-height: 250px;
+        max-width: 440px;
+        background: #f5f5f5;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 15px -5px #000000;
+        box-shadow: 0px 0px 15px -5px #000000;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .card-container-animation-one {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .card-container-animation-two {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .carousel-card-comment {
+        min-height: 150px;
+        background: #424242;
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 0px 15px -5px #000000;
+        box-shadow: 0px 0px 15px -5px #000000;
+        position: relative;
+        right: -175px;
+        top: -65px;
+        max-width: 350px;
+        padding: 5px 20px 5px 20px;
+        animation: float 3s ease-in-out infinite, gradient 20s ease infinite;
+        background: -webkit-linear-gradient(-45deg, #328537, #421b82, #6a1f6d, #164e16);
+        background-size: 400% 400%;
+        opacity: 0.8;
+    }
+
+    .carousel-card-container:hover {
+        animation: none;
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+
+    .carousel-card-comment-text h1 {
+        font-size: 19px;
+    }
+
+    .carousel-card-comment-text {
+        color: white;
+    }
+
+    .carousel-card-comment-text p {
+        font-size: 13px;
+    }
 
   /*---------------------------------------
       FEATURE
@@ -635,7 +709,8 @@ http://www.tooplate.com/view/2106-soft-landing
   -----------------------------------------*/
 
   #about .section-title,
-  #pricing .section-title {
+  #pricing .section-title,
+  #player .section-title {
     text-align: center;
   }
 
@@ -654,8 +729,29 @@ http://www.tooplate.com/view/2106-soft-landing
     padding: 20px 40px;
   }
 
+  .pricing-card {
+      background: #ffffff;
+      padding: 20px 40px;
+      border-radius: 15px;
+      border: none;
+      -webkit-box-shadow: 0px 0px 15px -5px #000000;
+      box-shadow: 0px 0px 15px -5px #000000;
+      transition: 0.5s;
+      cursor: pointer;
+      margin: 10px;
+  }
+
+.pricing-card:hover {
+    -webkit-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.88);
+    box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.88);
+}
+
   .pricing-title {
     padding-bottom: 5px;
+  }
+
+  .pricing-link {
+      text-align: center;
   }
 
   .pricing-info {
@@ -794,6 +890,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
   @media only screen and (max-width: 1200px) {
 
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 260px;
+      }
+
     .custom-navbar .navbar-nav {
       margin-left: 3em;
     }
@@ -805,6 +909,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
 
   @media only screen and (max-width: 992px) {
+
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 450px;
+      }
 
     section {
       padding: 60px 0;
@@ -840,6 +952,14 @@ http://www.tooplate.com/view/2106-soft-landing
 
 
   @media screen and (max-width: 767px) {
+
+      .carousel-card-container {
+          width: 100%;
+      }
+
+      .carousel-card-comment {
+          max-width: 450px;
+      }
 
     .section-title {
       padding-bottom: 20px;
@@ -921,6 +1041,20 @@ http://www.tooplate.com/view/2106-soft-landing
     .testimonial-image,
     .testimonial-info {
       height: 65vh;
+    }
+
+    .carousel-card-container {
+        min-height: 360px;
+    }
+
+    .carousel-card-comment {
+        width: 100%;
+        right: -6px;
+        top: -50px;
+    }
+
+    .carousel-card-user-image {
+        top: 220px;
     }
   }
 
@@ -1124,6 +1258,36 @@ http://www.tooplate.com/view/2106-soft-landing
     height: 500px;
 }
 
+.user-panel-nav {
+    min-height: 50px;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px -5px #000000;
+    box-shadow: 0px 0px 15px -5px #000000;
+    display: flex;
+    padding: 10px;
+}
+
+.user-panel-nav-link {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background: #29ca8e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-panel-nav-link:hover {
+    background: black;
+    color: white;
+}
+
 /* course single list */
 
 .course-thumbnail-img {
@@ -1181,3 +1345,70 @@ http://www.tooplate.com/view/2106-soft-landing
     }
 }
 
+.row-justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-form {
+    padding: 10px;
+}
+
+.profile-form-input {
+    width: 100%;
+    vertical-align: top;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    height: 50px;
+    margin-right: 0.5em;
+    padding-left: 15px;
+    outline: none;
+    border: solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.profile-form-submit {
+    width: 100%;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    height: 50px;
+    background: #29ca8e;
+    color: white;
+    border: none;
+    transition: 1s;
+}
+
+.profile-form-submit:hover {
+    background: black;
+}
+
+.user-profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-image {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background: #d9534f;
+    margin-bottom: 50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.user-profile-image-input {
+
+}
+
+.user-profile-image:hover {
+    opacity: 0.8;
+}

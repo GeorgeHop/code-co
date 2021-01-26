@@ -26,7 +26,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Юзер панель <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Админ панель</a></li>
-                                        <li><a class="dropdown-item" href="/user-panel">Личный кабинет</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('user.panel') }}">Личный кабинет</a></li>
                                     </ul>
                                 </li>
                             @endif
@@ -39,7 +39,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href="{{ route('admin.dashboard') }}">
                         {{ config('app.name') }} admin
                     </a>
                 </li>
@@ -64,7 +64,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Настройки сайта<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Настройки сайта</li>
-                        <li><a href="#">Данные сайта</a></li>
+                        <li><a href="{{ route('admin.site.index') }}">Данные сайта</a></li>
                     </ul>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Редактируемые страницы</li>

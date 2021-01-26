@@ -23,7 +23,9 @@
                     <td>{{ $course->author_id }}</td>
                     <td>
                         <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.courses.edit', $course->id) }}">Edit</a>
-                        <form class="buttons-actions" method="POST" action="">
+                        <form class="buttons-actions" method="POST" action="{{ route('admin.courses.destroy', $course->id) }}">
+                            @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                         </form>
                     </td>

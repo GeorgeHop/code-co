@@ -9,6 +9,6 @@ class SiteController extends Controller
 {
     public function index()
     {
-        return view();
+        return view('admin.pages.siteSettings.site_data');
     }
 }

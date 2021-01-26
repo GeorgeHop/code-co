@@ -1,7 +1,7 @@
 @extends('user.layouts.default_user')
 
 @section('content')
-<section id="pricing" class="custom-section" data-stellar-background-ratio="0.5">
+<section id="pricing" class="custom-section" data-stellar-background-ratio="0.5" xmlns="http://www.w3.org/1999/html">
         <div class="container">
             <div class="row">
 
@@ -29,20 +29,56 @@
                                                         {!! $course->info !!}
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <a class="buy-courses-button">Купить курс</a>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-1 col-sm-1">
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="section-title section-title-margin-top">
+                        <h1>Варианты курсов</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        @foreach($course->offers as $offer)
+                            <div class="col-md-4">
+                                <div class="pricing-thumb pricing-card">
+                                    <div class="pricing-title">
+                                        <h2>{{ $course['name'] }}</h2>
+                                        <h3>{{ $offer->title }}</h3>
+                                    </div>
+                                    <div class="pricing-info">
+                                        {!! $offer->description !!}
+
+                                        <p>{{ $course->duration }}/ дней</p>
+                                    </div>
+                                    <div class="pricing-bottom">
+                                        <span class="pricing-dollar">{{ $offer->cost }}</span>
+
+                                        @if( auth()->check() )
+                                            <button
+                                                type="button"
+                                                data-wfp="{{ $offer->id }}"
+                                                class="section-btn pricing-btn"
+                                            >
+                                                Купить
+                                            </button>
+                                        @else
+                                            <a class="pricing-link" href="{{ route('login') }}?intended={{ url()->current() }}">
+                                                Войти
+                                            </a>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        <div class="col-md-2"></div>
                     </div>
                 </div>
 

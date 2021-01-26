@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="../css/tooplate-style.css">
-    <link rel="stylesheet" href="../css/livechat.css">
+    <link rel="stylesheet" href="/css/tooplate-style.css">
+    <link rel="stylesheet" href="/css/livechat.css">
     <title>{{ config('app.name') }}</title>
 </head>
 <body>
@@ -69,13 +69,13 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Админ панель</a>
-                                    <a class="dropdown-item" href="/user-panel">Личный кабинет</a>
+                                    <a class="dropdown-item" href="{{ route('user.panel') }}">Личный кабинет</a>
                                 </div>
                             </div>
                         </li>
                     @else
                         <li>
-                            <a href="/user-panel" class="white-link">Личный кабинет</a>
+                            <a href="{{ route('user.panel') }}" class="white-link">Личный кабинет</a>
                         </li>
                     @endif
                     <li>
@@ -123,6 +123,7 @@
 
 
 <!-- SCRIPTS -->
+<script id="widget-wfp-script" language="javascript" type="text/javascript" src="https://secure.wayforpay.com/server/pay-widget.js"></script>
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>

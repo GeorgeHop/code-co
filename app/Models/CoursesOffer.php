@@ -6,29 +6,23 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class CoursesVideo
+ * Class CoursesOffer
  * @package App\Models
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class CoursesVideo extends Model
+class CoursesOffer extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'title',
         'description',
-        'source',
-        'course_id',
-        'video_number'
+        'currency',
+        'cost',
+        'type',
     ];
 
-    public function course()
-    {
+    public function course() {
         return $this->belongsTo(Course::class);
-    }
-
-    public function materials()
-    {
-        return $this->hasMany(CoursesMaterial::class, 'video_id');
     }
 }

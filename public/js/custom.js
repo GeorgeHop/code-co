@@ -4,7 +4,7 @@
 
     // PRE LOADER
     $(window).load(function(){
-      $('.preloader').fadeOut(1000); // set duration in brackets    
+      $('.preloader').fadeOut(1000); // set duration in brackets
     });
 
 
@@ -25,17 +25,32 @@
     // PARALLAX EFFECT
     $.stellar({
       horizontalScrolling: false,
-    }); 
+    });
 
 
-    // ABOUT SLIDER
     $('.owl-carousel').owlCarousel({
-      animateOut: 'fadeOut',
-      items: 1,
-      loop: true,
-      autoplayHoverPause: false,
-      autoplay: true,
-      smartSpeed: 1000,
+        loop:true,
+        items: 3,
+        margin:50,
+        nav:false,
+        // on small screens if autoplay = true card displaying between card
+        autoplay: false,
+        autoplayTimeout: 5000,
+        smartSpeed: 1500,
+        animateIn: 'linear',
+        animateOut: 'linear',
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:2
+            }
+        }
     });
 
 
@@ -48,6 +63,6 @@
           }, 1000);
             event.preventDefault();
       });
-    });  
+    });
 
 })(jQuery);
