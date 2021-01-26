@@ -13,31 +13,31 @@
                     </div>
                 </div>
             </div>
+            @if($courses->count() === 0)
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title description-min-height">
+                            <h1>Список курсов пуст... <a href="{{ route('courses.list') }}">Выбрать курс ?</a></h1>
+                        </div>
+                    </div>
+                </div>
+            @else
                 @foreach($courses as $course)
-                    @if($course)
-                        <div class="col-md-4 col-sm-6">
-                            <div class="pricing-thumb">
-                                <div class="pricing-title">
-                                    <h2>{{ $course->name }}</h2>
-                                </div>
-                                <div class="pricing-info">
-                                    {!! $course->info !!}
-                                </div>
-                                <div class="pricing-bottom">
-                                    <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
-                                </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="pricing-thumb">
+                            <div class="pricing-title">
+                                <h2>{{ $course->name }}</h2>
+                            </div>
+                            <div class="pricing-info">
+                                {!! $course->info !!}
+                            </div>
+                            <div class="pricing-bottom">
+                                <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
                             </div>
                         </div>
-                    @else
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="section-title description-min-height">
-                                    <h1>Список курсов пуст... <a href="{{ route('courses.list') }}">Выбрать курс ?</a></h1>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
+                    </div>
                 @endforeach
+            @endif
             </div>
     </section>
 @endsection
