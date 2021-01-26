@@ -3,21 +3,9 @@
 @section('content')
     <section id="pricing" class="custom-section" data-stellar-background-ratio="0.5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-2">
 
-                </div>
-                <div class="col-md-8">
-                    <div class="user-panel-nav">
-                        <a class="user-panel-nav-link">Список курсов</a>
-                        <a class="user-panel-nav-link">Корзина</a>
-                        <a class="user-panel-nav-link">Профиль</a>
-                    </div>
-                </div>
-                <div class="col-md-2">
+            <x-user.user-panel-header/>
 
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">

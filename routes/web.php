@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserPanelController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/approve-payment', [PaymentsController::class, 'approve']);
     Route::get('/user-panel/courses', [UserPanelController::class, 'index'])->name('user.panel');
     Route::get('/user-panel/player/{video}', [UserPanelController::class, 'show'])->name('user.player');
+    Route::get('/user-panel/profile', [UserController::class, 'edit'])->name('user.profile');
 });
 
 Route::get('/test', function () {

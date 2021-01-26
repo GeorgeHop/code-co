@@ -1351,3 +1351,64 @@ http://www.tooplate.com/view/2106-soft-landing
     align-items: center;
 }
 
+.profile-form {
+    padding: 10px;
+}
+
+.profile-form-input {
+    width: 100%;
+    vertical-align: top;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    height: 50px;
+    margin-right: 0.5em;
+    padding-left: 15px;
+    outline: none;
+    border: solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.profile-form-submit {
+    width: 100%;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.31);
+    height: 50px;
+    background: #29ca8e;
+    color: white;
+    border: none;
+    transition: 1s;
+}
+
+.profile-form-submit:hover {
+    background: black;
+}
+
+.user-profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-image {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background: #d9534f;
+    margin-bottom: 50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.user-profile-image-input {
+
+}
+
+.user-profile-image:hover {
+    opacity: 0.8;
+}
