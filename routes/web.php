@@ -56,6 +56,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/user-panel/courses', [UserPanelController::class, 'index'])->name('user.panel');
     Route::get('/user-panel/player/{video}', [UserPanelController::class, 'show'])->name('user.player');
     Route::get('/user-panel/profile', [UserController::class, 'edit'])->name('user.profile');
+    Route::put('/user-panel/profile/{user}', [UserController::class, 'update'])->name('user.update');
 });
 
 // forgot password view

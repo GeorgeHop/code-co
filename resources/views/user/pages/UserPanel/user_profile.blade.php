@@ -30,9 +30,12 @@
 
                 </div>
                 <div class="col-md-4">
-                    <form class="profile-form">
-                        <input type="text" placeholder="Name" class="profile-form-input" value="{{ $user->name }}" required/>
-                        <input type="email" placeholder="Email" class="profile-form-input" value="{{ $user->email }}" disabled/>
+                    <form class="profile-form" action="{{ route('user.update', Auth::user()) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <input type="text" class="profile-form-input"  id="name" name="name"
+                               value="{{ old('name') ?? $user->name }}" placeholder="Добавьте имя" required/>
+                        <input type="email" placeholder="Email" class="profile-form-input profile-form-input-disabled" value="{{ $user->email }}" disabled/>
                         <button type="submit" class="profile-form-submit">Изменить данные</button>
                     </form>
                 </div>
