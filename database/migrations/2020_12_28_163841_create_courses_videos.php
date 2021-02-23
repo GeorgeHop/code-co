@@ -20,6 +20,7 @@ class CreateCoursesVideos extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('source');
+            $table->boolean('is_preview')->default(0);
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses');

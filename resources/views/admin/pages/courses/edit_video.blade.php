@@ -50,13 +50,22 @@
                             rows="15"
                         >{{ old('description') ?? $video->description }}</textarea>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         @error('source')
                         <div class="alert alert-danger">
                             <p>{{$errors->first('source')}}</p>
                         </div>
                         @enderror
                         <x-admin.upload-single label="Видео" name="source" :value="$video->source"/>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="is_preview">Доступно к пробному просмотру ?</label>
+                        @error('is_preview')
+                        <div class="alert alert-danger">
+                            <p>{{$errors->first('is_preview')}}</p>
+                        </div>
+                        @enderror
+                        <input type=checkbox id="is_preview" name="is_preview" value="1" {{ (old('is_preview') || $video->is_preview) ? 'checked' : ''}}/>
                     </div>
                 </div>
             </div>

@@ -87,33 +87,59 @@
                         <h1>Расписание курса</h1>
                     </div>
 
-                    <div class="accordion" id="accordionExample">
-                        @foreach($course->videos as $video)
-                            <div class="card-collapse">
-                                <div class="card-header" id="card_{{$loop->index}}">
-                                    <h2 class="mb-0">
-                                        <button class="collapse-course-list-btn" type="button" data-toggle="collapse" data-target="#collapse_card_{{$loop->index}}" aria-expanded="false" aria-controls="collapse_card_{{$loop->index}}">
-                                            {{ $video->title }}
-                                        </button>
-                                    </h2>
-                                </div>
+                    <div class="col-md-1">
 
-                                <div id="collapse_card_{{$loop->index}}" class="collapse" aria-labelledby="card_{{$loop->index}}" data-parent="#accordionExample">
-                                    <div class="collapse-content-inner-wrapper">
-                                        <h3>{{ $video->title }}</h3>
-                                        <p>
-                                            {!! $video->description !!}
-                                        </p>
-                                        @foreach($video->materials as $material)
-                                            <h3>{{ $material->title }}</h3>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="accordion" id="accordionExample">
+                            @foreach($course->videos as $video)
+                                <div class="card-collapse">
+                                    <div class="card-header" id="card_{{$loop->index}}">
+                                        <h2 class="mb-0">
+                                            <button class="collapse-course-list-btn" type="button" data-toggle="collapse" data-target="#collapse_card_{{$loop->index}}" aria-expanded="false" aria-controls="collapse_card_{{$loop->index}}">
+                                                {{ $video->title }}
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    @if($video->is_preview)
+                                        <div class="row">
+                                            <div class="col-md-3">
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="embed-responsive preview-player">
+                                                    <video class="embed-responsive-item" width="420" height="540" controls controlsList="nodownload" preload="auto">
+                                                        <source id="videoSource" src="{{ $video->source }}">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    <div id="collapse_card_{{$loop->index}}" class="collapse" aria-labelledby="card_{{$loop->index}}" data-parent="#accordionExample">
+                                        <div class="collapse-content-inner-wrapper">
+                                            <h3>{{ $video->title }}</h3>
                                             <p>
-                                                {!! $material->description !!}
+                                                {!! $video->description !!}
                                             </p>
-                                        @endforeach
+                                            @foreach($video->materials as $material)
+                                                <h3>{{ $material->title }}</h3>
+                                                <p>
+                                                    {!! $material->description !!}
+                                                </p>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+
                     </div>
                 </div>
 

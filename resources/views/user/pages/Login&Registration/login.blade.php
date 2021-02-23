@@ -28,4 +28,5 @@
         <button type="submit" class="form-control">Отправить</button>
     </form>
     <p>Нет аккаунта ? <a href="{{ route('registration') }}">Registration</a></p>
+    <p>Забыли пароль ? <a href="{{ route('password.reset.request') }}">Восстановление</a></p>
 @endsection

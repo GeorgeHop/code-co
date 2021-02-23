@@ -19,7 +19,8 @@ class CoursesVideo extends Model
         'description',
         'source',
         'course_id',
-        'video_number'
+        'video_number',
+        'is_preview'
     ];
 
     public function course()

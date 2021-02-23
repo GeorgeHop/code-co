@@ -29,6 +29,7 @@ class VideoController extends Controller
     public function update($course, CoursesVideo $video)
     {
         $validatedData = $this->validateData();
+        $validatedData['is_preview'] = request()->is_preview ? 1 : 0;
         $video->update($validatedData);
         return redirect(route('admin.courses.index'));
     }
