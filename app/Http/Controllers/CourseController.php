@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\CoursesMaterial;
 use App\Models\CoursesVideo;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -20,6 +22,10 @@ class CourseController extends Controller
 
     public function show(Course $course)
     {
-        return view('user.pages.courses.courses_single', ['course' => $course->loadMissing('videos.materials'), 'offers' => $course->loadMissing('offers')]);
+        return view('user.pages.courses.courses_single', [
+            'auth_user_courses' => Auth::user()->courses,
+            'course' => $course->loadMissing('videos.materials'),
+            'offers' => $course->loadMissing('offers')
+        ]);
     }
 }

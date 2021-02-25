@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CoursesOffer;
 use App\Models\Payment;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PaymentsController extends Controller
@@ -32,13 +33,18 @@ class PaymentsController extends Controller
         ]);
     }
 
-    public function approve(Request $request) {
+    public function approve(User $user, Request $request) {
         if (!$request->merchantSignature || !$request->orderReference)
             abort(404);
 
         $payment = Payment::find($request->orderReference);
         $payment->paid = true;
         $payment->save();
+        $user->courses()->attach($payment->offer_id, [
+            'offer_type' => CoursesOffer::where('id', $payment->offer_id)->value('type'),
+            'course_id' => $payment->offer_id,
+            'user_id' => $payment->user_id
+        ]);
         return response()->json();
     }
 }
