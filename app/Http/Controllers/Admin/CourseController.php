@@ -13,7 +13,10 @@ class CourseController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.courses.list', ['courses' => Course::where('author_id', '=', Auth::id())->latest()->paginate()]);
+        return view('admin.pages.courses.list',
+            [
+                'courses' => Course::where('author_id', '=', Auth::id())->latest()->paginate(),
+            ]);
     }
 
     public function edit(Course $course)
@@ -21,6 +24,7 @@ class CourseController extends Controller
         return view('admin.pages.courses.edit', [
             'course' => $course->loadMissing('videos.materials'),
             'offers' => $course->loadMissing('offers'),
+            'groups' => $course->loadMissing('groups'),
             'edit' => true
         ]);
     }
@@ -64,7 +68,7 @@ class CourseController extends Controller
     public function validateData()
     {
         return request()->validate([
-            'name' => 'required|min:3|max:30',
+            'name' => 'required|min:3|max:130',
             'info' => 'required|min:10|max:300',
             'duration' => 'required|min:1',
             'is_on_homepage' => 'nullable',

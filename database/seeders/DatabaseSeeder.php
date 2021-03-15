@@ -2,9 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Course;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,13 +19,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'root',
-            'email' => 'root@root.root',
-            'email_verified_at' => now(),
-            'password' => Hash::make('root'),
+        User::factory()->create([
+            'email' => 'test@test.test',
             'is_admin' => true,
         ]);
-        // \App\Models\User::factory(10)->create();
+        User::factory()->count(20)->create();
+        Post::factory()->count(20)->create();
+        Course::factory()->count(5)->create();
+
     }
 }

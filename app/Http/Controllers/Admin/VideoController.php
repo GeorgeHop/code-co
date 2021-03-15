@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Group;
 use App\Models\CoursesVideo;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,12 @@ class VideoController extends Controller
 {
     public function create($course, CoursesVideo $video)
     {
-        return view('admin.pages.courses.edit_video', ['video' => $video, 'course' => $course, 'edit' => false]);
+        return view('admin.pages.courses.edit_video',
+            [
+                'video' => $video,
+                'course' => $course,
+                'edit' => false
+            ]);
     }
 
     public function store(Course $course)

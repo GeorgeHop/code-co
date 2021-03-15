@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\CoursesGroupsController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\Admin\MaterialController;
 use App\Http\Controllers\Admin\OffersController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\SiteController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
+use App\Models\Group;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
@@ -37,6 +39,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('/live-chat', 'admin.pages.liveChat.live_chat')->name('live-chat');
     Route::view('/live-chat/single', 'admin.pages.liveChat.single')->name('live-chat-single');
     Route::resource('courses/{course}/offers', OffersController::class);
+    Route::resource('courses/{course}/groups', CoursesGroupsController::class);
+    Route::post('courses/{course}/groups/{group}/subscribe', [CoursesGroupsController::class, 'addUserToGroup'])->name('groups.subscribe');
+    Route::delete('courses/{course}/groups/{group}/unsubscribe/{user}', [CoursesGroupsController::class, 'deleteUserFromGroup'])->name('groups.unsubscribe');
     Route::resource('site', SiteController::class);
 
     Route::prefix('lfm')->group(function () {

@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <label for="description">Описание видео</label>
                         @error('description')
                         <div class="alert alert-danger">
@@ -50,13 +50,28 @@
                             rows="15"
                         >{{ old('description') ?? $video->description }}</textarea>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         @error('source')
                         <div class="alert alert-danger">
                             <p>{{$errors->first('source')}}</p>
                         </div>
                         @enderror
                         <x-admin.upload-single label="Видео" name="source" :value="$video->source"/>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="open_date">Дата публикации видео</label>
+                        @error('open_date')
+                        <div class="alert alert-danger">
+                            <p>{{$errors->first('open_date')}}</p>
+                        </div>
+                        @enderror
+                        <input
+                            type="date"
+                            id="open_date"
+                            name="open_date"
+                            value="{{ \Carbon\Carbon::now()->toDateString() }}"
+                            min="1999-01-01"
+                        >
                     </div>
                     <div class="col-md-2">
                         <label for="is_preview">Доступно к пробному просмотру ?</label>

@@ -62,19 +62,21 @@
                                         <span class="pricing-dollar">{{ $offer->cost }}</span>
 
                                         @if( auth()->check() )
-                                            @foreach($auth_user_courses as $user_course)
-                                                @if( $user_course->pivot->offer_type === $offer->type && $user_course->id === $course->id)
-                                                    <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
-                                                @else
-                                                    <button
-                                                        type="button"
-                                                        data-wfp="{{ $offer->id }}"
-                                                        class="section-btn pricing-btn"
-                                                    >
-                                                        Купить
-                                                    </button>
-                                                @endif
-                                            @endforeach
+                                            @if( count($auth_user_courses) > 0 )
+                                                @foreach($auth_user_courses as $user_course)
+                                                    @if( $user_course->pivot->offer_type === $offer->type && $user_course->id === $course->id)
+                                                        <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                <button
+                                                    type="button"
+                                                    data-wfp="{{ $offer->id }}"
+                                                    class="section-btn pricing-btn"
+                                                >
+                                                    Купить
+                                                </button>
+                                            @endif
                                         @else
                                             <a class="pricing-link" href="{{ route('login') }}?intended={{ url()->current() }}">
                                                 Войти

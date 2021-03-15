@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
@@ -15,7 +16,7 @@ use Laravel\Passport\HasApiTokens;
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable, HasApiTokens;
+    use Notifiable, HasApiTokens, HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -50,5 +51,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function courses()
     {
         return $this->belongsToMany(Course::class)->withPivot('offer_type');
+    }
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class);
     }
 }

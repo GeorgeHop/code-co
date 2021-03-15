@@ -81,6 +81,40 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
+                        <h2>Группы</h2><a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.groups.create', [$course->id]) }}">Добавить группу</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Название группы</th>
+                            <th scope="col">Действие</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($course->groups as $group)
+                                <tr>
+                                    <th scope="row">{{ $group->id }}</th>
+                                    <td>{{ $group->name }}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.groups.edit', [$course->id, $group->id]) }}">Edit</a>
+                                        <form class="buttons-actions" method="POST" action="">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
                         <h2>Предложения</h2><a class="btn btn-primary" style="margin-right:5px; color: white" href="{{ route('admin.offers.create', [$course->id]) }}">Добавить опции</a>
                     </div>
                 </div>
@@ -114,8 +148,6 @@
                     </table>
                 </div>
             </div>
-        @endif
-        @if($edit)
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
