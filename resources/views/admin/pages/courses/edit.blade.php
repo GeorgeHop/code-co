@@ -90,6 +90,7 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">Название группы</th>
+                            <th scope="col">Человек в группе</th>
                             <th scope="col">Действие</th>
                         </tr>
                         </thead>
@@ -98,6 +99,7 @@
                                 <tr>
                                     <th scope="row">{{ $group->id }}</th>
                                     <td>{{ $group->name }}</td>
+                                    <td>{{ count($group->users) }}</td>
                                     <td>
                                         <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.groups.edit', [$course->id, $group->id]) }}">Edit</a>
                                         <form class="buttons-actions" method="POST" action="{{ route('admin.groups.destroy', [$course->id, $group->id]) }}">
