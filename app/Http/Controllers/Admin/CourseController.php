@@ -50,11 +50,11 @@ class CourseController extends Controller
         return redirect(route('admin.courses.index'));
     }
 
-//    public function destroy(Course $course)
-//    {
-//        $course->delete();
-//        return redirect(route('admin.courses.index'));
-//    }
+    public function destroy(Course $course)
+    {
+        $course->delete();
+        return redirect(route('admin.pages.courses.edit'));
+    }
 
     public function insertCustomData()
     {

@@ -44,7 +44,7 @@ class OffersController extends Controller
     public function destroy($course, CoursesOffer $offer)
     {
         $offer->delete();
-        return redirect(route('admin.courses.index'));
+        return back();
     }
 
     public function validateData()

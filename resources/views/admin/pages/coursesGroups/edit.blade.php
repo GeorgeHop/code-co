@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="edit-panel">
-        <form action="{{ $edit ? route('admin.groups.update', [$course->id, $group->id]) : route('admin.groups.store', [$course]) }}" method="POST">
+        <form action="{{ $edit ? route('admin.groups.update', [$course->id, $group->id]) : route('admin.groups.store', $course) }}" method="POST">
             @csrf
             @if($edit)
                 @method('PUT')

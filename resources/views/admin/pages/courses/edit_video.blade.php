@@ -59,21 +59,6 @@
                         <x-admin.upload-single label="Видео" name="source" :value="$video->source"/>
                     </div>
                     <div class="col-md-2">
-                        <label for="open_date">Дата публикации видео</label>
-                        @error('open_date')
-                        <div class="alert alert-danger">
-                            <p>{{$errors->first('open_date')}}</p>
-                        </div>
-                        @enderror
-                        <input
-                            type="date"
-                            id="open_date"
-                            name="open_date"
-                            value="{{ \Carbon\Carbon::now()->toDateString() }}"
-                            min="1999-01-01"
-                        >
-                    </div>
-                    <div class="col-md-2">
                         <label for="is_preview">Доступно к пробному просмотру ?</label>
                         @error('is_preview')
                         <div class="alert alert-danger">

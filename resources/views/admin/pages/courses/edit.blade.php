@@ -100,7 +100,7 @@
                                     <td>{{ $group->name }}</td>
                                     <td>
                                         <a class="btn btn-sm btn-primary buttons-actions" style="margin-right:5px" href="{{ route('admin.groups.edit', [$course->id, $group->id]) }}">Edit</a>
-                                        <form class="buttons-actions" method="POST" action="">
+                                        <form class="buttons-actions" method="POST" action="{{ route('admin.groups.destroy', [$course->id, $group->id]) }}">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">Delete</button>

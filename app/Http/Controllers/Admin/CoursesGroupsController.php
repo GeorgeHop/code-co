@@ -20,9 +20,9 @@ class CoursesGroupsController extends Controller
         ]);
     }
 
-    public function update($course, Group $coursesGroups)
+    public function update(Course $course, Group $group)
     {
-        $coursesGroups->update($this->validateData());
+        $group->update($this->validateData());
         return back();
     }
 
@@ -53,9 +53,16 @@ class CoursesGroupsController extends Controller
         return back();
     }
 
+    public function destroy(Course $course, Group $group)
+    {
+        $group->users()->detach();
+        $group->delete();
+        return back();
+    }
+
     protected function validateData() {
         return request()->validate([
-            'name' => ['required', 'min:3', 'max:30'],
+            'name' => ['required', 'min:3', 'max:50'],
         ]);
     }
 }
