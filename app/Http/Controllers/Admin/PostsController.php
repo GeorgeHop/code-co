@@ -36,9 +36,10 @@ class PostsController extends Controller
 
     protected function validateData() {
         return request()->validate([
-            'title' => ['required', 'min:3', 'max:30'],
+            'title' => ['required', 'min:3', 'max:60'],
             'description' => ['required', 'min:10'],
             'author' => ['required', 'min:3', 'max:30'],
+            'is_on_homepage' => 'boolean',
             'is_visible_for_all' => 'boolean',
             'thumbnail' => 'string'
         ]);

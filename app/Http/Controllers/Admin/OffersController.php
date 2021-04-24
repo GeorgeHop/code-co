@@ -51,7 +51,7 @@ class OffersController extends Controller
     {
         return request()->validate([
             'title' => ['required', 'min:3', 'max:30'],
-            'description' => ['required', 'min:5', 'max:150'],
+            'description' => ['required', 'min:5', 'max:400'],
             'cost' => ['required', 'min:1'],
             'currency' => ['required'],
             'type' => ['required']

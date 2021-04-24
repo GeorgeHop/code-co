@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('author');
             $table->text('description');
+            $table->boolean('is_on_homepage')->default(false);
             $table->string('thumbnail')->nullable();
             $table->boolean('is_visible_for_all')->default(false);
             $table->timestamps();

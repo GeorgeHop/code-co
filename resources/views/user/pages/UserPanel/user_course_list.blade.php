@@ -13,7 +13,7 @@
         </div>
         <div class="container display-flex">
             <div class="embed-responsive player-custom">
-                <video class="embed-responsive-item" width="420" height="540" controls controlsList="nodownload" preload="auto">
+                <video class="embed-responsive-item" width="420" height="540" controls controlsList="nodownload" preload="auto" data-setup='{"example_option":true}'>
                     <source id="videoSource" src="{{ $video->source }}">
                 </video>
             </div>

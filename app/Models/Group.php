@@ -11,7 +11,14 @@ class Group extends Model
 
     protected $fillable = [
         'name',
+        'is_launch',
+        'launch_date'
     ];
+
+    public function videos()
+    {
+        return $this->belongsToMany(CoursesVideo::class)->withPivot('is_open');
+    }
 
     public function courses()
     {

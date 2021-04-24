@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /**
  * Class Payment
@@ -16,6 +17,11 @@ class Payment extends Model
 
     protected $fillable = ['user_id', 'offer_id', 'paid', 'refunded'];
 
+    public function __construct(array $attributes = []) {
+        parent::__construct($attributes);
+        $this->uuid = (string) Str::uuid();
+    }
+
     public function offer() {
         return $this->belongsTo(CoursesOffer::class, 'offer_id');
     }
@@ -24,7 +30,7 @@ class Payment extends Model
         $data = implode(';', [
             env('WFP_MERCHANT_ACCOUNT'),
             request()->getHost(),
-            $this->id,
+            $this->uuid,
             $this->created_at->unix(),
             $this->offer->cost,
             $this->offer->currency,

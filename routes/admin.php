@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\MaterialController;
 use App\Http\Controllers\Admin\OffersController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\SiteController;
+use App\Http\Controllers\admin\SocialController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Models\Group;
@@ -42,7 +43,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('courses/{course}/groups', CoursesGroupsController::class);
     Route::post('courses/{course}/groups/{group}/subscribe', [CoursesGroupsController::class, 'addUserToGroup'])->name('groups.subscribe');
     Route::delete('courses/{course}/groups/{group}/unsubscribe/{user}', [CoursesGroupsController::class, 'deleteUserFromGroup'])->name('groups.unsubscribe');
-    Route::resource('site', SiteController::class);
+    Route::post('courses/{course}/groups/{group}/change-video-status/{video}', [VideoController::class, 'changeVideoStatus'])->name('video.change_status');
+    Route::resource('socials', SocialController::class);
 
     Route::prefix('lfm')->group(function () {
         Lfm::routes();

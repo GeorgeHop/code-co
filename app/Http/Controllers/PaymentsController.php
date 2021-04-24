@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\CoursesOffer;
 use App\Models\Payment;
 use App\Models\User;
+use App\Notifications\PaidNotification;
 use Illuminate\Http\Request;
 
 class PaymentsController extends Controller
@@ -21,7 +23,7 @@ class PaymentsController extends Controller
             'merchantAccount' => env('WFP_MERCHANT_ACCOUNT'),
             'merchantDomainName' => request()->getHost(),
             'merchantSignature' => $payment->merchantSignature(),
-            'orderReference' => $payment->id,
+            'orderReference' => $payment->uuid,
             'orderDate' => $payment->created_at->unix(),
             'orderTimeout' => 49000,
             'amount' => $offer->cost,
@@ -33,18 +35,30 @@ class PaymentsController extends Controller
         ]);
     }
 
-    public function approve(User $user, Request $request) {
+    public function approve(Request $request) {
         if (!$request->merchantSignature || !$request->orderReference)
             abort(404);
 
-        $payment = Payment::find($request->orderReference);
+        $payment = Payment::where('uuid', $request->orderReference)->first();
+        $paidOffer = $payment->offer;
+        $user = User::where('id', $payment->user_id)->first();
+
         $payment->paid = true;
         $payment->save();
         $user->courses()->attach($payment->offer_id, [
-            'offer_type' => CoursesOffer::where('id', $payment->offer_id)->value('type'),
-            'course_id' => $payment->offer_id,
+            'offer_type' => $paidOffer->type,
+            'course_id' => $payment->offer->course_id,
             'user_id' => $payment->user_id
         ]);
+
+        $userCourse = Course::where('id', $payment->offer->course_id)->first();
+        $notifyData = [
+          'course' => $userCourse,
+          'offer' => $payment->offer
+        ];
+
+        $user->notify(new PaidNotification($notifyData));
+
         return response()->json();
     }
 }

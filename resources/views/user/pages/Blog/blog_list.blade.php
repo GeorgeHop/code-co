@@ -8,7 +8,7 @@
 
                 </div>
                 <div class="col-md-6 row-justify-content-center section-title-margin-top">
-                    <div class="section-title">
+                    <div class="section-title section-title-center">
                         <h1>Познавательные вещи и новости</h1>
                     </div>
                 </div>

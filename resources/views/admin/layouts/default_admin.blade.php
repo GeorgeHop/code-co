@@ -46,14 +46,6 @@
                 <li>
                     <a href="{{ route('admin.courses.index') }}">Курсы</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ученики <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Подробности</li>
-                        <li><a href="#">Курсы ученика</a></li>
-                        <li><a href="#">Редактировать данные</a></li>
-                    </ul>
-                </li>
                 <li>
                     <a href="{{ route('admin.users.index') }}">Юзеры</a>
                 </li>
@@ -63,13 +55,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Настройки сайта<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Настройки сайта</li>
-                        <li><a href="{{ route('admin.site.index') }}">Данные сайта</a></li>
-                    </ul>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Редактируемые страницы</li>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Редактор контента</a></li>
+                        <li class="dropdown-header">Настройки</li>
+                        <li><a href="{{ route('admin.socials.index') }}">Данные сайта</a></li>
                     </ul>
                 </li>
             </ul>

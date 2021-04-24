@@ -62,12 +62,8 @@
                                         <span class="pricing-dollar">{{ $offer->cost }}</span>
 
                                         @if( auth()->check() )
-                                            @if( count($auth_user_courses) > 0 )
-                                                @foreach($auth_user_courses as $user_course)
-                                                    @if( $user_course->pivot->offer_type === $offer->type && $user_course->id === $course->id)
-                                                        <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
-                                                    @endif
-                                                @endforeach
+                                            @if ( auth()->user()->courses()->wherePivot('offer_type', $offer->type)->exists() )
+                                                <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
                                             @else
                                                 <button
                                                     type="button"

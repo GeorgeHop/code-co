@@ -32,7 +32,7 @@ class CourseController extends Controller
     public function update(Course $course)
     {
         $course->update($this->insertCustomData());
-        return redirect(route('admin.courses.index'));
+        return back();
     }
 
     public function create(Course $course)
@@ -53,7 +53,7 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         $course->delete();
-        return redirect(route('admin.pages.courses.edit'));
+        return redirect(route('admin.courses.index'));
     }
 
     public function insertCustomData()
@@ -69,10 +69,9 @@ class CourseController extends Controller
     {
         return request()->validate([
             'name' => 'required|min:3|max:130',
-            'info' => 'required|min:10|max:300',
+            'info' => 'required|min:10|max:1000',
             'duration' => 'required|min:1',
             'is_on_homepage' => 'nullable',
-            'cost' => 'required',
             'thumbnail' => 'string'
         ]);
     }

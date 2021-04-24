@@ -8,6 +8,10 @@ http://www.tooplate.com/view/2106-soft-landing
 
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
 
+    html {
+        scroll-behavior: smooth;
+    }
+
   body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
@@ -83,6 +87,10 @@ http://www.tooplate.com/view/2106-soft-landing
 
   .section-title {
     padding-bottom: 40px;
+  }
+
+  .section-title-center {
+    text-align: center;
   }
 
   .section-title-margin-top {
@@ -355,6 +363,7 @@ http://www.tooplate.com/view/2106-soft-landing
       -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       padding: 10px 0;
+      transition: 1s;
     }
 
     .top-nav-collapse .navbar-brand {
@@ -425,21 +434,93 @@ http://www.tooplate.com/view/2106-soft-landing
 
   .home-info {
     margin-top: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-shadow: 0px 0px 4px rgba(0,0,0,0.75);
   }
 
-  .home-info h3 {
-    color: #f0f0f0;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin: 10px 0;
+  .scroll-down-button {
+      height: 60px;
+      width: 30px;
+      border: 3px;
+      border-style: solid;
+      border-radius: 50px;
+      border-color: antiquewhite;
+      cursor: pointer;
+      transition: 0.5s;
   }
 
-  /*
-    reviews
-  */
+  .scroll-down-button:hover {
+      background: #3414eb;
+  }
+
+    .scroll-down-button span::before {
+        position: absolute;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: '';
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+        background-color: #fff;
+        border-radius: 100%;
+        -webkit-animation: sdb10 2s infinite;
+        animation: sdb10 2s infinite;
+        box-sizing: border-box;
+    }
+    @-webkit-keyframes sdb10 {
+        0% {
+            -webkit-transform: translate(0, 0);
+            opacity: 0;
+        }
+        40% {
+            opacity: 1;
+        }
+        80% {
+            -webkit-transform: translate(0, 20px);
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes sdb10 {
+        0% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+        40% {
+            opacity: 1;
+        }
+        80% {
+            transform: translate(0, 40px);
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+  .scroll-down-button:focus {
+
+  }
+
+.home-info h3 {
+color: #f0f0f0;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 4px;
+text-transform: uppercase;
+margin: 10px 0;
+}
+
+/*
+reviews
+*/
 
     #reviews {
         background: #ffffff;
@@ -568,6 +649,7 @@ http://www.tooplate.com/view/2106-soft-landing
   .feature-image {
     position: absolute;
     bottom: -27em;
+    z-index: 9;
   }
 
 
@@ -1112,6 +1194,13 @@ http://www.tooplate.com/view/2106-soft-landing
     width: 100%;
     transition: 0.7s;
     background: rgba(37, 177, 119, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-part-bottom p {
+    color: #ffffff;
 }
 
 .blog-part-overlay:hover {

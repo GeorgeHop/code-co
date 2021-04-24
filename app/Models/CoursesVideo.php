@@ -28,6 +28,11 @@ class CoursesVideo extends Model
         return $this->belongsTo(Course::class);
     }
 
+    public function group()
+    {
+        return $this->belongsToMany(CoursesVideo::class);
+    }
+
     public function materials()
     {
         return $this->hasMany(CoursesMaterial::class, 'video_id');

@@ -16,6 +16,8 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->boolean('is_launch')->default(0);
+            $table->string('launch_date')->nullable();
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->timestamps();

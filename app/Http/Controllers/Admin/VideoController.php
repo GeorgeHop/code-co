@@ -46,6 +46,12 @@ class VideoController extends Controller
         return redirect(route('admin.courses.index'));
     }
 
+    public function changeVideoStatus($course, Group $group, CoursesVideo $video)
+    {
+        $group->videos()->where('courses_video_id', $video->id)->update(['is_open' => request()->is_open ? 1 : 0]);
+        return back();
+    }
+
     public function validateData()
     {
         return request()->validate([

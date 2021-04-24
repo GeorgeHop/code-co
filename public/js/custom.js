@@ -7,7 +7,6 @@
       $('.preloader').fadeOut(1000); // set duration in brackets
     });
 
-
     // MENU
     $('.navbar-collapse a').on('click',function(){
       $(".navbar-collapse").collapse('hide');
@@ -21,38 +20,10 @@
           }
     });
 
-
     // PARALLAX EFFECT
     $.stellar({
       horizontalScrolling: false,
     });
-
-
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        items: 3,
-        margin:50,
-        nav:false,
-        // on small screens if autoplay = true card displaying between card
-        autoplay: false,
-        autoplayTimeout: 5000,
-        smartSpeed: 1500,
-        animateIn: 'linear',
-        animateOut: 'linear',
-        autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:2
-            }
-        }
-    });
-
 
     // SMOOTHSCROLL
     $(function() {

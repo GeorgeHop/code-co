@@ -30,6 +30,8 @@ $('button[data-wfp]').click(function () {
                     axios.post('/approve-payment', {
                         'merchantSignature': response.merchantSignature,
                         'orderReference': response.orderReference,
+                        'transactionStatus': response.transactionStatus,
+                        'reason': response.reason
                     });
                 },
                 function (response) {

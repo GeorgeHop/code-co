@@ -28,13 +28,18 @@
                     <input type="text" class="form-control" id="author" name="author" value="{{ old('author') ?? $post->author }}" placeholder="Автор" required/>
                 </div>
 
-                <div class="col-md-6">
-                    <label for="is_visible_for_all">Автор</label>
+                <div class="col-md-4">
+                    <label for="is_visible_for_all">Видимость поста</label>
                     <select class="form-control" id="is_visible_for_all" name="is_visible_for_all">
                         <option value="">--Select--</option>
                         <option {{ ($post->is_visible_for_all == '1' ? 'selected' : '') }} value="1">Виден всем</option>
                         <option {{ ($post->is_visible_for_all == '0' ? 'selected' : '') }} value="0">Виден только зарегестрированным пользователям</option>
                     </select>
+                </div>
+
+                <div class="col-md-2">
+                    <label for="is_on_homepage">Показывать на главной ?</label>
+                    <input id="is_on_homepage" name="is_on_homepage" type="checkbox" value="1" {{ (old('is_on_homepage') || $post->is_on_homepage) ? 'checked' : ''}}/>
                 </div>
             </div>
         </div>

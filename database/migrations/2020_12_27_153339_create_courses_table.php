@@ -19,7 +19,6 @@ class CreateCoursesTable extends Migration
             $table->boolean('is_on_homepage')->nullable();
             $table->string('author_id')->nullable();
             $table->text('info');
-            $table->integer('cost');
             $table->string('duration');
             $table->string('thumbnail')->nullable();
             $table->boolean('is_free')->nullable();

@@ -13,6 +13,7 @@
                     </div>
                 </div>
             </div>
+            @if( count($courses) > 0 )
                 @foreach($courses as $course)
                     @if($course)
                         <div class="col-md-4 col-sm-6">
@@ -24,20 +25,33 @@
                                     {!! $course->info !!}
                                 </div>
                                 <div class="pricing-bottom">
-                                    <a href="{{ route('user.player', [$course->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
-                                </div>
-                            </div>
-                        </div>
-                    @else
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="section-title description-min-height">
-                                    <h1>Список курсов пуст... <a href="{{ route('courses.list') }}">Выбрать курс ?</a></h1>
+                                    @foreach($course->groups as $group)
+                                        @if(Auth::user()->groups->contains($group->id))
+                                            @if(!$group->is_launch)
+                                                <a class="section-btn pricing-btn pricing-btn-panel">Запуск группы {{ $group->launch_date }}</a>
+                                            @elseif( $group->is_launch and count($group->videos) > 0)
+                                                <a href="{{ route('user.player', [$group->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
+                                            @else
+                                                <a class="section-btn pricing-btn pricing-btn-panel">Подождите немного...</a>
+                                            @endif
+                                        @else
+                                            <a class="section-btn pricing-btn pricing-btn-panel">Добавляем вас в группу...</a>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     @endif
                 @endforeach
+            @else
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title description-min-height">
+                            <h1>Список курсов пуст... <a href="{{ route('courses.list') }}">Выбрать курс ?</a></h1>
+                        </div>
+                    </div>
+                </div>
+            @endif
             </div>
     </section>
 @endsection

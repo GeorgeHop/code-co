@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoursesGroupsVideosAccess extends Migration
+class CreateCoursesVideoGroup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateCoursesGroupsVideosAccess extends Migration
      */
     public function up()
     {
-        Schema::create('courses_groups_videos_access', function (Blueprint $table) {
+        Schema::create('courses_video_group', function (Blueprint $table) {
             $table->id();
             $table->boolean('is_open')->default(0);
-            $table->unsignedBigInteger('user_group_id');
-            $table->unsignedBigInteger('video_id');
-            $table->foreign('user_group_id')->references('id')->on('groups');
-            $table->foreign('video_id')->references('id')->on('courses_videos');
+            $table->unsignedBigInteger('courses_video_id');
+            $table->integer('group_id');
+            $table->foreign('courses_video_id')->references('id')->on('courses_videos');
             $table->timestamps();
         });
     }

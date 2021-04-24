@@ -24,15 +24,6 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') ?? $course->name }}" placeholder="Добавьте название курса" required>
                     </div>
                     <div class="col-md-3">
-                        <label for="cost">Стоимость</label>
-                        @error('cost')
-                        <div class="alert alert-danger">
-                            <p>{{$errors->first('cost')}}</p>
-                        </div>
-                        @enderror
-                        <input type="number" class="form-control" id="cost" name="cost" value="{{ old('cost') ?? $course->cost }}" placeholder="Добавьте стоимость курса" required>
-                    </div>
-                    <div class="col-md-3">
                         <label for="duration">Продолжительность</label>
                         @error('duration')
                         <div class="alert alert-danger">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\LiveChatController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\SubscriptionController;
@@ -27,7 +28,7 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/', [CourseController::class, 'main'])->name('main');
+Route::get('/', [HomepageController::class, 'index'])->name('main');
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::get('/registration', [AuthController::class, 'showRegistration']);
 Route::post('/registration', [AuthController::class, 'signup'])->name('registration');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentsTable extends Migration
+class CreateSocialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreatePaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('socials', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid')->unique();
-            $table->string('user_id');
-            $table->string('offer_id');
-            $table->boolean('paid')->default(false);
-            $table->boolean('refunded')->default(false);
+            $table->string('name')->nullable();
+            $table->text('description')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreatePaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('socials');
     }
 }

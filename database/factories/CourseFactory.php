@@ -26,7 +26,6 @@ class CourseFactory extends Factory
             'is_on_homepage' => false,
             'author_id' => null,
             'info' => $this->faker->realText(200),
-            'cost' => 100,
             'duration' => 60,
             'thumbnail' => null,
             'is_free' => null

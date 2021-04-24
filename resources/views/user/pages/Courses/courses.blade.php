@@ -18,19 +18,19 @@
                 <div class="row">
                     @foreach($courses as $course)
                         <div class="col-md-4 col-sm-6">
-                            <div class="pricing-thumb pricing-card">
-                                <div class="pricing-title">
-                                    <h2>{{ $course['name'] }}</h2>
+                            <a href="{{ route('courses.show', $course->id) }}">
+                                <div class="pricing-thumb pricing-card">
+                                    <div class="pricing-title">
+                                        <h2>{{ $course['name'] }}</h2>
+                                    </div>
+                                    <div class="pricing-info">
+                                        {!! $course->info !!}
+                                    </div>
+                                    <div class="pricing-bottom">
+                                       <h4>Длительность</h4><p>{{ $course['duration'] }}/ дней</p>
+                                    </div>
                                 </div>
-                                <div class="pricing-info">
-                                    {!! $course->info !!}
-                                    <p>{{ $course['duration'] }}/ дней</p>
-                                </div>
-                                <div class="pricing-bottom">
-                                    <span class="pricing-dollar">{{ $course['cost'] }}</span>
-                                    <a href="{{ route('courses.show', $course->id) }}" class="section-btn pricing-btn">Подробности</a>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                         <?php
                         $rows++;

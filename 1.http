@@ -1,0 +1,19 @@
+POST http://code-co.test/login
+Content-Type: application/json
+
+{
+    "email": "test@test.test",
+    "password": "password"
+}
+
+###
+
+POST https://code-co.test/approve-payment
+Content-Type: application/json
+
+{
+    "merchantSignature":  "sfdfsdf",
+    "orderReference": "122f3d2e-6817-479a-b013-ec4e462e6627",
+    "transactionStatus":  "jkgvnedgvs",
+    "reason": "dgvdesrgv"
+}

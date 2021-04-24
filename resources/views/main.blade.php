@@ -13,13 +13,8 @@
     <meta name="keywords" content="">
     <meta name="team" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
-
-    <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/tooplate-style.css">
     <link rel="stylesheet" href="/css/livechat.css">
 
@@ -31,9 +26,7 @@
 <!-- PRE LOADER -->
 <section class="preloader">
     <div class="spinner">
-
         <span class="spinner-rotate"></span>
-
     </div>
 </section>
 
@@ -41,24 +34,19 @@
 <!-- MENU -->
 <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
     <div class="container">
-
         <div class="navbar-header">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-
-            <!-- lOGO TEXT HERE -->
             <a href="/" class="navbar-brand navbar-brand-white">{{ config('app.name') }}</a>
         </div>
-
-        <!-- MENU LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/" class="white-link">Главная</a></li>
-                <li><a href="{{ Request::is('/') ? '#feature' : route('courses.list') }}" class="smoothScroll white-link">Курсы</a></li>
-                <li><a href="/about" class="white-link">О нас</a></li>
+                <li><a href="{{ route('courses.list') }}" class="white-link">Курсы</a></li>
+{{--                <li><a href="/about" class="white-link">О нас</a></li>--}}
                 <li><a href="/blog-list" class="white-link">Блог</a></li>
                 <li><a href="/contacts" class="white-link">Контакты</a></li>
             </ul>
@@ -92,7 +80,6 @@
                 @endif
             </ul>
         </div>
-
     </div>
 </section>
 
@@ -105,21 +92,11 @@
 <footer id="footer" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row">
-
             <div class="copyright-text col-md-12 col-sm-12">
                 <div class="col-md-6 col-sm-6">
                     <p>Copyright &copy; 2020 Code-co</p>
                 </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <ul class="social-icon">
-                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                    </ul>
-                </div>
             </div>
-
         </div>
     </div>
 </footer>
@@ -130,7 +107,6 @@
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.stellar.min.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
 <script src="/js/smoothscroll.js"></script>
 <script src="/js/custom.js"></script>
 <script src="/js/web.js"></script>
