@@ -1,8 +1,8 @@
 @extends('user.layouts.auth_user')
 
 @section('content')
-    <h3>Log in</h3>
-    <form method="POST" class="login-form">
+    <h3>Вход</h3>
+    <form action="/login" method="POST" class="login-form">
         @csrf
 
         <input

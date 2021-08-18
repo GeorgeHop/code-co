@@ -157,7 +157,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($course->videos as $video)
+                        @foreach($videos as $video)
                             <tr>
                                 <th scope="row">{{ $video->id }}</th>
                                 <td>{{ $video->title }}</td>

@@ -14,22 +14,22 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-2">
-                    <div class="user-profile-image-container">
-                        <label for="upload-user-image" class="user-profile-image"></label>
-                        <input id="upload-user-image" type="file" class="user-profile-image-input" hidden/>
-                    </div>
-                </div>
-                <div class="col-md-5"></div>
-            </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-md-5"></div>--}}
+{{--                <div class="col-md-2">--}}
+{{--                    <div class="user-profile-image-container">--}}
+{{--                        <label for="upload-user-image" class="user-profile-image"></label>--}}
+{{--                        <input id="upload-user-image" type="file" class="user-profile-image-input" hidden/>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-5"></div>--}}
+{{--            </div>--}}
 
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <form class="profile-form" action="{{ route('user.update', Auth::user()) }}" method="POST">
                         @csrf
                         @method('PUT')
@@ -39,17 +39,10 @@
                         <button type="submit" class="profile-form-submit">Изменить данные</button>
                     </form>
                 </div>
-                <div class="col-md-4">
-                    <form class="profile-form">
-                        <input type="password" placeholder="Пароль" class="profile-form-input" value="{{ $user->password }}" required/>
-                        <button type="submit" class="profile-form-submit">Изменить пароль</button>
-                    </form>
-                </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
 
                 </div>
             </div>
-
         </div>
     </section>
 @endsection

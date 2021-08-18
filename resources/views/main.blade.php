@@ -72,11 +72,11 @@
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-primary margin-top-logout-button">Log out</button>
+                            <button type="submit" class="btn btn-primary margin-top-logout-button">Выйти</button>
                         </form>
                     </li>
                 @else
-                    <li><a href="{{ Request::is('login') ? '/registration' : '/login'}}" class="white-link">{{ Request::is('login') ? 'Registration' : 'Log in'}}</a></li>
+                    <li><a href="{{ Request::is('login') ? '/registration' : '/login'}}" class="white-link">{{ Request::is('login') ? 'Регистрация' : 'Вход'}}</a></li>
                 @endif
             </ul>
         </div>

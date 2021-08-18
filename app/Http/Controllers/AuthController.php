@@ -27,7 +27,7 @@ class AuthController extends Controller
         $userHaveAccount = User::where('email', '=', $request->input('email'))->exists();
 
         if ($userHaveAccount) {
-            return back()->with('message', 'User with the same email already registered');
+            return back()->with('message', 'Пользователь с таким email уже зарегестрирован');
         }
 
         request()->validate([
@@ -61,7 +61,7 @@ class AuthController extends Controller
             return redirect($request->intended ?? route('user.panel'));
         }
 
-        return back()->with('message', 'The provided data do not match our records');
+        return back()->with('message', 'Ошибка. email или пароль введены не правильно');
     }
 
     public function logout(Request $request)

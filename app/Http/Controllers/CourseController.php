@@ -18,7 +18,8 @@ class CourseController extends Controller
     public function show(Course $course)
     {
         return view('user.pages.Courses.courses_single', [
-            'course' => $course->loadMissing(['videos.materials', 'offers']),
+            'course' => $course->loadMissing('offers'),
+            'videos' => $course->videos()->orderBy('video_number')->with('materials')->get()
         ]);
     }
 }

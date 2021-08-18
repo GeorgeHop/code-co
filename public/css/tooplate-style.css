@@ -21,8 +21,6 @@ http://www.tooplate.com/view/2106-soft-landing
       background-size: 400% 400%;
   }
 
-
-
   /*---------------------------------------
      TYPOGRAPHY
   -----------------------------------------*/
@@ -447,7 +445,7 @@ http://www.tooplate.com/view/2106-soft-landing
       border: 3px;
       border-style: solid;
       border-radius: 50px;
-      border-color: antiquewhite;
+      border-color: white;
       cursor: pointer;
       transition: 0.5s;
   }
@@ -505,9 +503,15 @@ http://www.tooplate.com/view/2106-soft-landing
         }
     }
 
-  .scroll-down-button:focus {
+@media screen and (max-width: 992px) {
+    .scroll-down-button {
+        border-color: black;
+    }
 
-  }
+    .scroll-down-button span::before {
+        background: black;
+    }
+}
 
 .home-info h3 {
 color: #f0f0f0;
@@ -1395,7 +1399,8 @@ reviews
     width: 100%;
     background-size: cover;
     object-fit: cover;
-    min-height: 500px;
+    min-height: 735px;
+    height: 100%;
     padding: 20px;
 }
 

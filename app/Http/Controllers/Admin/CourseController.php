@@ -22,7 +22,8 @@ class CourseController extends Controller
     public function edit(Course $course)
     {
         return view('admin.pages.courses.edit', [
-            'course' => $course->loadMissing('videos.materials'),
+            'course' => $course,
+            'videos' => $course->videos()->orderBy('video_number')->get(),
             'offers' => $course->loadMissing('offers'),
             'groups' => $course->loadMissing('groups'),
             'edit' => true
@@ -69,7 +70,7 @@ class CourseController extends Controller
     {
         return request()->validate([
             'name' => 'required|min:3|max:130',
-            'info' => 'required|min:10|max:1000',
+            'info' => 'required|min:10|max:2000',
             'duration' => 'required|min:1',
             'is_on_homepage' => 'nullable',
             'thumbnail' => 'string'

@@ -25,19 +25,23 @@
                                     {!! $course->info !!}
                                 </div>
                                 <div class="pricing-bottom">
-                                    @foreach($course->groups as $group)
-                                        @if(Auth::user()->groups->contains($group->id))
-                                            @if(!$group->is_launch)
-                                                <a class="section-btn pricing-btn pricing-btn-panel">Запуск группы {{ $group->launch_date }}</a>
-                                            @elseif( $group->is_launch and count($group->videos) > 0)
-                                                <a href="{{ route('user.player', [$group->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
+                                    @if ( count($course->groups) > 0 )
+                                        @foreach($course->groups as $group)
+                                            @if(Auth::user()->groups->contains($group->id))
+                                                @if(!$group->is_launch)
+                                                    <a class="section-btn pricing-btn pricing-btn-panel">Запуск группы {{ $group->launch_date }}</a>
+                                                @elseif( $group->is_launch and count($group->videos) > 0)
+                                                    <a href="{{ route('user.player', [$group->videos->first()->id]) }}" class="section-btn pricing-btn pricing-btn-panel">Учить</a>
+                                                @else
+                                                    <a class="section-btn pricing-btn pricing-btn-panel">Подождите немного...</a>
+                                                @endif
                                             @else
-                                                <a class="section-btn pricing-btn pricing-btn-panel">Подождите немного...</a>
+                                                <a class="section-btn pricing-btn pricing-btn-panel">Добавляем вас в группу...</a>
                                             @endif
-                                        @else
-                                            <a class="section-btn pricing-btn pricing-btn-panel">Добавляем вас в группу...</a>
-                                        @endif
-                                    @endforeach
+                                        @endforeach
+                                    @else
+                                        <a class="section-btn pricing-btn pricing-btn-panel">Обработка покупки...</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

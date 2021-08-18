@@ -18,7 +18,7 @@ class CreateCoursesVideos extends Migration
             $table->string('video_number');
             $table->unsignedBigInteger('course_id');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('source');
             $table->boolean('is_preview')->default(0);
             $table->timestamps();

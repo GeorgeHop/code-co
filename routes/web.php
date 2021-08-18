@@ -47,9 +47,14 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     $request->fulfill();
     return redirect(route('user.panel'));
 })->middleware(['auth', 'signed'])->name('verification.verify');
-Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
-Route::post('live-chat/send', [LiveChatController::class, 'send'])->name('live-chat.send');
+Route::post('/email/verify', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back();
+})->middleware(['auth', 'throttle:6,1'])->name('verification.resend');
+
+Route::view('/email-not-verified', 'user.pages.Login&Registration.confirm')->middleware('auth')->name('verification.notice');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/generate-payment', [PaymentsController::class, 'generate'])->name('payments.generate');
@@ -104,6 +109,8 @@ Route::post('/reset-password', function(Request $request) {
         ? redirect(route('login'))->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update.post');
+
+Route::post('live-chat/send', [LiveChatController::class, 'send'])->name('live-chat.send');
 
 Route::get('/test', function () {
     $user = \App\Models\User::first();

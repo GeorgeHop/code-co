@@ -1,7 +1,7 @@
 @extends('user.layouts.auth_user')
 
 @section('content')
-    <h3>Registration</h3>
+    <h3>Регистрация</h3>
     <form action="/registration" method="POST" class="login-form">
         @csrf
 

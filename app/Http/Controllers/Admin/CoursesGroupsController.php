@@ -11,7 +11,7 @@ use App\Notifications\CourseStarted;
 
 class CoursesGroupsController extends Controller
 {
-    public function edit(Course $course, Group $group)
+    public function edit(Course $course, Group $group, User $user)
     {
         $groupUsersIDs = $group->users()->pluck('user_id');
 
